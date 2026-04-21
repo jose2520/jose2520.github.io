@@ -1,0 +1,145 @@
+<section class="contact" id="contact" aria-label="Sección de contacto">
+  <!-- [ Esferas de fondo animadas ] -->
+  <div class="contact-bg-anim" aria-hidden="true">
+    <div class="cb1"></div>
+    <div class="cb2"></div>
+    <div class="cb3"></div>
+  </div>
+
+  <!-- [ Layout de dos columnas ] -->
+  <div class="contact-container">
+    <!-- ── Sub-módulo 6.1: Información de contacto ── -->
+    <div class="contact-left reveal">
+      <div class="section-eyebrow light">
+        <i class="fas fa-envelope" aria-hidden="true"></i> Contacto
+      </div>
+
+      <h2 class="contact-heading">
+        ¿Hacemos algo<br /><strong>épico</strong> juntos?
+      </h2>
+
+      <p class="contact-sub">
+        Mi buzón siempre está abierto para nuevas aventuras, preguntas sobre
+        código o simplemente para decir hola.
+      </p>
+
+      <!-- Lista de datos de contacto -->
+      <div class="contact-info" role="list">
+        <a
+          href="mailto:josedelcarmen_diaz@outlook.com"
+          class="ci-item"
+          role="listitem"
+        >
+          <div class="ci-icon">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </div>
+          <span>josedelcarmen_diaz@outlook.com</span>
+        </a>
+
+        <a href="#" class="ci-item" role="listitem">
+          <div class="ci-icon">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          </div>
+          <span>Barranquilla, Colombia 🇨🇴</span>
+        </a>
+
+        <a href="#" class="ci-item" role="listitem">
+          <div class="ci-icon">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </div>
+          <span>github.com/josediaz</span>
+        </a>
+
+        <a href="#" class="ci-item" role="listitem">
+          <div class="ci-icon">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </div>
+          <span>linkedin.com/in/josediaz</span>
+        </a>
+      </div>
+      <!-- /contact-info -->
+    </div>
+    <!-- /contact-left -->
+
+    <!-- ── Sub-módulo 6.2: Formulario de contacto ── -->
+    <div class="contact-right reveal">
+      <form class="contact-form" id="contactForm" novalidate>
+        <!-- Campo: Nombre -->
+        <div class="form-group">
+          <label for="fname">
+            <i class="fas fa-user" aria-hidden="true"></i> Tu Nombre
+          </label>
+          <input
+            type="text"
+            id="fname"
+            name="nombre"
+            placeholder="¿Cómo te llamas?"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <!-- Campo: Email -->
+        <div class="form-group">
+          <label for="femail">
+            <i class="fas fa-at" aria-hidden="true"></i> Tu Email
+          </label>
+          <input
+            type="email"
+            id="femail"
+            name="email"
+            placeholder="tú@email.com"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <!-- Campo: Mensaje -->
+        <div class="form-group">
+          <label for="fmsg">
+            <i class="fas fa-comment-dots" aria-hidden="true"></i> ¿Qué
+            tienes en mente?
+          </label>
+          <textarea
+            id="fmsg"
+            name="mensaje"
+            rows="4"
+            placeholder="Cuéntame tu historia..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn-send" aria-label="Enviar mensaje">
+          <span class="btn-text">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar
+            Mensaje
+          </span>
+          <span
+            class="btn-loading"
+            style="display: none"
+            aria-live="polite"
+          >
+            <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+            Enviando...
+          </span>
+        </button>
+
+        <!-- Mensaje de éxito -->
+        <div
+          class="form-success"
+          id="formSuccess"
+          role="alert"
+          aria-live="assertive"
+        >
+          <i class="fas fa-check-circle" aria-hidden="true"></i>
+          ¡Mensaje enviado! Te responderé pronto 🚀
+        </div>
+      </form>
+      <!-- /contact-form -->
+    </div>
+    <!-- /contact-right -->
+  </div>
+  <!-- /contact-container -->
+</section>
+<!-- /mod-contact -->

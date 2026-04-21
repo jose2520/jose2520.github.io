@@ -1,0 +1,76 @@
+<header id="mod-nav">
+  <nav
+    class="navbar"
+    id="navbar"
+    role="navigation"
+    aria-label="Navegación principal"
+  >
+    <!-- [ Barra principal ] -->
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Ir al inicio">
+        <span class="logo-j">Jose</span><span class="logo-dot">.dev</span>
+      </a>
+
+      <!-- Links de navegación (desktop) -->
+      <ul class="nav-links" role="menubar">
+        <li role="none">
+          <a href="#about" role="menuitem">Mi Historia</a>
+        </li>
+        <li role="none">
+          <a href="#tools" role="menuitem">Herramientas</a>
+        </li>
+        <li role="none">
+          <a href="#projects" role="menuitem">Creaciones</a>
+        </li>
+        <li role="none"><a href="#contact" role="menuitem">Jose!</a></li>
+      </ul>
+
+      <!-- Acciones: CV + toggle de tema -->
+      <div class="nav-actions">
+        <!-- Descarga CV -->
+        <a href="#" class="btn-cv" aria-label="Descargar CV">
+          <i class="fas fa-file-code" aria-hidden="true"></i> CV Mágico
+        </a>
+
+        <!-- Botón claro / oscuro -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Cambiar tema claro/oscuro"
+        >
+          <span class="toggle-track" aria-hidden="true">
+            <i class="fas fa-sun sun-icon"></i>
+            <i class="fas fa-moon moon-icon"></i>
+            <span class="toggle-thumb"></span>
+          </span>
+        </button>
+      </div>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- /nav-container -->
+
+    <!-- [ Menú móvil desplegable ] -->
+    <div class="mobile-menu" id="mobileMenu" role="menu" aria-hidden="true">
+      <ul>
+        <li><a href="#about" role="menuitem">Mi Historia</a></li>
+        <li><a href="#tools" role="menuitem">Herramientas</a></li>
+        <li><a href="#projects" role="menuitem">Creaciones</a></li>
+        <li><a href="#contact" role="menuitem">Jose!</a></li>
+      </ul>
+    </div>
+    <!-- /mobile-menu -->
+  </nav>
+</header>
+<!-- /mod-nav -->

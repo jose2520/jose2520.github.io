@@ -1,0 +1,480 @@
+/* ================================================================
+   JOSE.DEV — CSS Modular Architecture
+   File: animations.css
+   Purpose: Glitch, Órbitas, Shimmer, Partículas, Transiciones
+   ================================================================ */
+
+/* ── GLITCH EFFECT ────────────────────────────────────────────── */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: var(--red);
+  animation: glitch1 4s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-2px, -2px);
+  opacity: 0;
+}
+
+.glitch::after {
+  color: #00f0ff;
+  animation: glitch2 4s infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(2px, 2px);
+  opacity: 0;
+}
+
+@keyframes glitch1 {
+  0%,
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(-2px, -2px);
+  }
+  89%,
+  91% {
+    opacity: 0.6;
+    transform: translate(-4px, -4px);
+  }
+  90%,
+  92% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitch2 {
+  0%,
+  88%,
+  100% {
+    opacity: 0;
+    transform: translate(2px, 2px);
+  }
+  89%,
+  91% {
+    opacity: 0.5;
+    transform: translate(4px, 4px);
+  }
+  90%,
+  92% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+}
+
+/* ── NAME UNDERLINE ANIMATION ──────────────────────────────────– */
+.name-underline {
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--red), #ff6b7a, var(--red));
+  background-size: 200% 100%;
+  border-radius: 2px;
+  animation: gradientMove 3s linear infinite;
+  margin-top: 4px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+/* ── ORBITAL ANIMATION SYSTEM ──────────────────────────────────– */
+.hero-image-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.hero-orbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.orbit-ring {
+  position: absolute;
+  border: 1px dashed var(--border);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate var(--speed, 20s) linear infinite;
+}
+
+.ring1 {
+  width: 480px;
+  height: 480px;
+  --speed: 18s;
+}
+
+.ring2 {
+  width: 620px;
+  height: 620px;
+  --speed: 28s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.orbit-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(var(--a))
+    translateX(calc(var(--r, 170px))) rotate(calc(-1 * var(--a)));
+  transition: transform 0.3s;
+}
+
+.ring1 .orbit-icon {
+  --r: 240px;
+}
+
+.ring2 .orbit-icon {
+  --r: 310px;
+}
+
+.orbit-icon i {
+  color: var(--red);
+  font-size: 1.5rem;
+}
+
+/* ── HERO PHOTO FRAME & GLOW ───────────────────────────────────– */
+.hero-photo-frame {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  z-index: 2;
+}
+
+.photo-glow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, var(--red-glow), transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 3s ease infinite;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  background: var(--card);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: var(--red);
+  border: 3px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-avatar img {
+  width: 150%;
+  height: 150%;
+  object-fit: contain;
+  transform: translateY(70px);
+}
+
+/* ── ANIMATED PHOTO BORDER ─────────────────────────────────────– */
+.photo-border-animated {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--red) 0deg,
+    transparent 120deg,
+    var(--red) 240deg,
+    transparent 360deg
+  );
+  animation: spinBorder 3s linear infinite;
+  z-index: 0;
+}
+
+@keyframes spinBorder {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── HERO BADGE BOUNCE ─────────────────────────────────────────– */
+.hero-badge {
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 4px 20px var(--red-glow);
+  animation: badgeBounce 2s ease infinite;
+  z-index: 3;
+}
+
+@keyframes badgeBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ── FLOATING CODE SNIPPETS ────────────────────────────────────– */
+.floating-code {
+  position: absolute;
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  z-index: 3;
+  animation: float 5s ease infinite;
+}
+
+.fc1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.fc2 {
+  top: 20%;
+  right: 2%;
+  animation-delay: 1.5s;
+}
+.fc3 {
+  bottom: 20%;
+  left: 5%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+/* ── CURSOR GLOW EFFECT ────────────────────────────────────────– */
+/* Aplicado dinámicamente desde JavaScript */
+@keyframes cursorGlowPulse {
+  0%,
+  100% {
+    opacity: 0.06;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
+/* ── BUTTON HOVER EFFECTS ──────────────────────────────────────– */
+.btn-primary,
+.btn-secondary,
+.btn-cv {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmerBtn 0.6s ease-in-out;
+}
+
+@keyframes shimmerBtn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ── CARD SCALE & SHADOW TRANSITIONS ───────────────────────────– */
+.tool-card,
+.project-card,
+.about-card {
+  position: relative;
+}
+
+.tool-card,
+.project-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ── TYPING CURSOR ANIMATION ───────────────────────────────────– */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--red);
+  margin-left: 2px;
+  animation: typingCursor 1s infinite;
+}
+
+@keyframes typingCursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ── LOADING SPINNER (para formulario) ──────────────────────––  */
+.btn-loading {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── CHIP & TAG TRANSITIONS ────────────────────────────────────– */
+.chip,
+.ptag {
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ── LINK UNDERLINE ANIMATION ──────────────────────────────────– */
+.nav-links a::after,
+.underline-animated::after {
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ── FORM INPUT FOCUS GLOW ────────────────────────────────────– */
+.form-group input:focus,
+.form-group textarea:focus {
+  animation: inputFocusGlow 0.3s ease-out;
+}
+
+@keyframes inputFocusGlow {
+  0% {
+    box-shadow: 0 0 0 0 var(--red-soft);
+  }
+  100% {
+    box-shadow: 0 0 0 3px var(--red-soft);
+  }
+}
+
+/* ── GENERAL SMOOTH TRANSITIONS ────────────────────────────────– */
+* {
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+button,
+a,
+input,
+textarea {
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ── PAGE TRANSITION FADE ──────────────────────────────────────– */
+html {
+  animation: pageLoad 0.5s ease-out;
+}
+
+@keyframes pageLoad {
+  0% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ── STAGGER ANIMATIONS FOR LISTS ──────────────────────────────– */
+.reveal:nth-child(n) {
+  animation: revealStagger 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes revealStagger {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
