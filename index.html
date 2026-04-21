@@ -1,85 +1,121 @@
 <!doctype html>
 <html lang="es" data-theme="dark">
-  <!-- ═══════════════════════════════════════════════════════════════
-     HEAD — Meta, Fuentes, Estilos
-     ═══════════════════════════════════════════════════════════════ -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Jose Diaz — Junior Developer & Imagineer. Portfolio personal."
-    />
-    <meta name="author" content="Jose Diaz" />
-    <title>Jose.dev — Developer &amp; Imagineer</title>
+     <!-- ═══════════════════════════════════════════════════════════════
+          HEAD — Meta, Fuentes, Estilos
+          ═══════════════════════════════════════════════════════════════ -->
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="description" content="Jose Diaz — Junior Developer & Imagineer. Portfolio personal."/>
+          <meta name="author" content="Jose Diaz" />
+          <title>Jose.dev — Developer &amp; Imagineer</title>
 
-    <!-- [ Fuentes ] -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+          <!-- SEO: URL canónica preferida para evitar contenido duplicado -->
+          <link rel="canonical" href="https://jose2520.github.io/" />
 
-    <!-- [ Iconos ] -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+          <!-- Robots: instrucciones para motores de búsqueda (index, follow permite indexación) -->
+          <meta name="robots" content="index, follow" />
 
-    <!-- [ Estilos modulares - Orden de carga: Base → Layout → Módulos → Animaciones ] -->
-    <link rel="stylesheet" href="src/css/main.css" />
-    <link rel="stylesheet" href="src/css/layout.css" />
-    <link rel="stylesheet" href="src/css/modules.css" />
-    <link rel="stylesheet" href="src/css/animations.css" />
-  </head>
+          <!-- Open Graph: metadatos usados por Facebook, LinkedIn y otras redes al compartir -->
+          <meta property="og:locale" content="es_ES" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Jose.dev — Developer &amp; Imagineer" />
+          <meta property="og:description" content="Jose Diaz — Junior Developer &amp; Imagineer. Portfolio personal." />
+          <meta property="og:url" content="https://jose2520.github.io/" />
+          <meta property="og:site_name" content="Jose.dev" />
+          <!-- og:image: imagen que se mostrará al compartir; usar URL absoluta HTTPS. Recomendado 1200×630 px. -->
+          <meta property="og:image" content="https://jose2520.github.io/public/img/profile/josed.jpg" />
 
-  <!-- ══════════════════════════════ BODY ══════════════════════════════ -->
-  <body>
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 0 · Capas de fondo globales                         │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-background"></div>
+          <!-- Twitter Card: controla cómo se ve el enlace cuando se comparte en Twitter -->
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Jose.dev — Developer &amp; Imagineer" />
+          <meta name="twitter:description" content="Jose Diaz — Junior Developer &amp; Imagineer. Portfolio personal." />
+          <!-- twitter:image: misma imagen que og:image funciona bien -->
+          <meta name="twitter:image" content="https://jose2520.github.io/public/img/profile/josed.jpg" />
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 1 · Navegación Principal                            │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-nav"></div>
+          <!-- theme-color: color de la barra de estado en navegadores móviles / PWA -->
+          <meta name="theme-color" content="#0f172a" />
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 2 · Hero — Presentación                             │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-hero"></div>
+          <!-- JSON-LD (schema.org): ayuda a los motores a entender la entidad (Person) y habilita Rich Results -->
+          <script type="application/ld+json">
+          {
+               "@context":"https://schema.org",
+               "@type":"Person",
+               "name":"Jose Diaz",
+               "url":"https://jose2520.github.io/",
+               "jobTitle":"Junior Developer & Imagineer",
+               "description":"Junior Developer & Imagineer. Portfolio personal."
+          }
+          </script>
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 3 · Sobre Mí — Detrás del Teclado                   │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-about"></div>
+          <!-- [ Fuentes ] -->
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap"
+               rel="stylesheet"
+          />
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 4 · Herramientas — Mi Caja de Juguetes              │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-tools"></div>
+          <!-- [ Iconos ] -->
+          <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 5 · Proyectos — Mis Aventuras                       │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-projects"></div>
+          <!-- [ Estilos modulares - Orden de carga: Base → Layout → Módulos → Animaciones ] -->
+          <link rel="stylesheet" href="src/css/main.css" />
+          <link rel="stylesheet" href="src/css/layout.css" />
+          <link rel="stylesheet" href="src/css/modules.css" />
+          <link rel="stylesheet" href="src/css/animations.css" />
+     </head>
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 6 · Contacto — ¿Hacemos algo épico juntos?          │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-contact"></div>
+     <!-- ══════════════════════════════[ BODY ]══════════════════════════════ -->
+     <body>
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 0 · Capas de fondo globales                         │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-background"></div>
 
-    <!-- ┌─────────────────────────────────────────────────────────────┐
-         │  MÓDULO 7 · Footer                                          │
-         └─────────────────────────────────────────────────────────────┘ -->
-    <div id="mod-footer"></div>
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 1 · Navegación Principal                            │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-nav"></div>
 
-    <!-- ══════════════════════════════ SCRIPTS ══════════════════════════════ -->
-    <script src="src/js/core.js"></script>
-    <script src="src/js/theme.js"></script>
-    <script src="src/js/modules.js"></script>
-    <script src="src/js/canvas.js"></script>
-    <script src="src/js/forms.js"></script>
-  </body>
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 2 · Hero — Presentación                             │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-hero"></div>
+
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 3 · Sobre Mí — Detrás del Teclado                   │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-about"></div>
+
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 4 · Herramientas — Mi Caja de Juguetes              │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-tools"></div>
+
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 5 · Proyectos — Mis Aventuras                       │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-projects"></div>
+
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 6 · Contacto — ¿Hacemos algo épico juntos?          │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-contact"></div>
+
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MÓDULO 7 · Footer                                          │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-footer"></div>
+
+          <!-- ══════════════════════════════[ SCRIPTS ]═════════════════════════════ -->
+          <script src="src/js/core.js"></script>
+          <script src="src/js/theme.js"></script>
+          <script src="src/js/script.js"></script>
+          <script src="src/js/modules.js"></script>
+          <script src="src/js/canvas.js"></script>
+          <script src="src/js/forms.js"></script>
+     </body>
 </html>
