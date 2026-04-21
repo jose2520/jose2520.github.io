@@ -46,17 +46,30 @@
 
 /* Light theme */
 [data-theme="light"] {
-  --bg: #f5f5fa;
-  --bg2: #eeeef5;
-  --bg3: #e8e8f2;
-  --card: #ffffff;
-  --card-hover: #f0f0f8;
-  --border: rgba(0, 0, 0, 0.08);
-  --text: #0f0f1a;
-  --text-muted: #555570;
-  --text-faint: #aaaacc;
-  --nav-bg: rgba(245, 245, 250, 0.88);
-  --shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  /* Backgrounds: blanco con ligeros matices lila */
+  --bg:         #ffffff;        /* fondo principal - blanco puro */
+  --bg2:        #fbf8ff;        /* fondo secundario - muy tenue lila */
+  --bg3:        #f3efff;        /* fondo terciario - ligero lila */
+
+  /* Surfaces */
+  --card:       #ffffff;        /* tarjetas */
+  --card-hover: #fbf8ff;        /* hover ligero con matiz lila */
+
+  /* Borders and text */
+  --border:     rgba(124,92,255,0.08); /* borde sutil con tint lila */
+  --text:       #0f0f1a;        /* texto principal (oscuro sobre blanco) */
+  --text-muted: #6b658a;        /* texto secundario - tono lila grisáceo */
+  --text-faint: #bfb9d9;        /* texto tenue */
+
+  /* Navbar / shadows */
+  --nav-bg:     rgba(255,255,255,0.9);
+  --shadow:     0 8px 40px rgba(16,12,40,0.06);
+
+  /* Accent palette (replaces 'red' variables in light theme) */
+  --red:        #7c5cff;       /* color principal de acento: lila */
+  --red-dark:   #5a3dff;       /* acento oscuro */
+  --red-glow:   rgba(124,92,255,0.35);
+  --red-soft:   rgba(124,92,255,0.12);
 }
 
 /* ── HTML & BODY ───────────────────────────────────────────────── */
