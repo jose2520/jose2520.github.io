@@ -22,21 +22,13 @@
         els.forEach(el => {
         el.addEventListener('mouseenter', () => {
             if (!cursor || !cursorRing) return;
-            cursor.style.width      = '20px';
-            cursor.style.height     = '20px';
-            cursor.style.background = 'rgba(232,25,44,0.7)';
-            cursorRing.style.width  = '56px';
-            cursorRing.style.height = '56px';
-            cursorRing.style.opacity = '0.8';
+            cursor.classList.add('hover');
+            cursorRing.classList.add('hover');
         });
         el.addEventListener('mouseleave', () => {
             if (!cursor || !cursorRing) return;
-            cursor.style.width      = '12px';
-            cursor.style.height     = '12px';
-            cursor.style.background = 'var(--red, #e8192c)';
-            cursorRing.style.width  = '36px';
-            cursorRing.style.height = '36px';
-            cursorRing.style.opacity = '0.5';
+            cursor.classList.remove('hover');
+            cursorRing.classList.remove('hover');
         });
         });
     }
@@ -45,3 +37,16 @@
     attachHoverHandlers();
     setTimeout(attachHoverHandlers, 800);
 })();
+
+/* ── CURSOR GLOW ──────────────────────────────────────────────── */
+(function initCursorGlow() {
+  const glow = document.createElement('div');
+  glow.className = 'cursor-glow';
+  document.body.appendChild(glow);
+
+  document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top  = e.clientY + 'px';
+  });
+})();
+

@@ -18,6 +18,7 @@
   /* Primary Colors */
   --red: #e63946;
   --red-dark: #c1121f;
+  --red-rgb: 230, 57, 70;
   --red-glow: rgba(230, 57, 70, 0.35);
   --red-soft: rgba(230, 57, 70, 0.12);
 
@@ -68,6 +69,7 @@
   /* Accent palette (replaces 'red' variables in light theme) */
   --red:        #7c5cff;       /* color principal de acento: lila */
   --red-dark:   #5a3dff;       /* acento oscuro */
+  --red-rgb:    124, 92, 255;
   --red-glow:   rgba(124,92,255,0.35);
   --red-soft:   rgba(124,92,255,0.12);
 }

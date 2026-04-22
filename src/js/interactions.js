@@ -93,25 +93,6 @@
     });
   });
 
-  /* ── CURSOR GLOW EFFECT ────────────────────────────────────────– */
-  (function initCursorGlow() {
-    const glow = document.createElement("div");
-    glow.style.cssText = `
-      position: fixed; pointer-events: none; z-index: 9999;
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, rgba(230,57,70,0.06), transparent 70%);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: left 0.12s ease, top 0.12s ease;
-      will-change: left, top;
-    `;
-    document.body.appendChild(glow);
-
-    document.addEventListener("mousemove", (e) => {
-      glow.style.left = e.clientX + "px";
-      glow.style.top = e.clientY + "px";
-    });
-  })();
 
   /* ── CONTACT FORM HANDLING ────────────────────────────────────– */
   const contactForm = document.getElementById("contactForm");
