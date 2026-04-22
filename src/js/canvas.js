@@ -1,7 +1,7 @@
 /* ================================================================
-   JOSE.DEV — JavaScript Modular Architecture
-   File: canvas.js
-   Purpose: Canvas background with animated code nodes and particles
+    JOSE.DEV — JavaScript Modular Architecture
+    File: canvas.js
+    Purpose: Canvas background with animated code nodes and particles
    ================================================================ */
 
 /* ── CANVAS NODES BACKGROUND ───────────────────────────────────– */

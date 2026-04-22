@@ -228,6 +228,36 @@ Reemplaza el avatar en el Módulo 2.2:
 Y en CSS agrega `img { width:100%; height:100%; object-fit:cover; }` dentro de `.hero-avatar`.
 
 ---
+---
+
+## Enviar formulario por correo (EmailJS)
+
+Si quieres que los mensajes enviados desde el formulario lleguen a tu correo personal sin montar un backend, puedes usar EmailJS (servicio que reenvía formularios desde el cliente).
+
+Pasos rápidos:
+
+1. Regístrate en https://www.emailjs.com/ y verifica tu email.
+2. Crea un Service (por ejemplo: gmail) y copia el Service ID.
+3. Crea una Template (ej. contact_form) y en la plantilla usa variables como `from_name`, `reply_to`, `message`.
+4. Copia tu User ID (aparece en el dashboard).
+5. En este repositorio:
+   - Abre `index.html` y asegúrate de que existe la línea que carga el SDK:
+     ```html
+     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+     ```
+   - Abre `src/js/forms.js` y reemplaza los placeholders:
+     - `YOUR_EMAILJS_USER_ID` → tu User ID
+     - `YOUR_SERVICE_ID` → Service ID
+     - `YOUR_TEMPLATE_ID` → Template ID
+
+Notas sobre la plantilla (Template):
+
+- Asegúrate que la plantilla de EmailJS contiene las variables que usa el script (`from_name`, `reply_to`, `message`) o ajusta `templateParams` en `src/js/forms.js`.
+- EmailJS tiene un plan gratuito con límites razonables para formularios personales.
+
+Si prefieres usar otro servicio (Formspree, Netlify Forms, un servidor propio o una función serverless), dímelo y adapto el código.
+
+---
 
 ## 👤 Autor
 

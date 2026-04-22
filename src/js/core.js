@@ -1,7 +1,7 @@
 /* ================================================================
-   JOSE.DEV — JavaScript Modular Architecture
-   File: core.js
-   Purpose: Core initialization, scroll reveal, counters
+    JOSE.DEV — JavaScript Modular Architecture
+    File: core.js
+    Purpose: Core initialization, scroll reveal, counters
    ================================================================ */
 
 (function initCore() {

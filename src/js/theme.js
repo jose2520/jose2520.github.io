@@ -1,7 +1,7 @@
 /* ================================================================
-   JOSE.DEV — JavaScript Modular Architecture
-   File: theme.js
-   Purpose: Dark/Light mode toggle, localStorage persistence
+    JOSE.DEV — JavaScript Modular Architecture
+    File: theme.js
+    Purpose: Dark/Light mode toggle, localStorage persistence
    ================================================================ */
 
 (function initTheme() {
