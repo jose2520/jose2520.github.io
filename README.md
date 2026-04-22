@@ -28,7 +28,7 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 
 ---
 
-## 🛠 Tecnologías
+## 🛠 Tecnologias
 
 | Capa         | Tecnología                                     | Versión      |
 | ------------ | ---------------------------------------------- | ------------ |
@@ -82,7 +82,7 @@ jose.dev/
 
 ---
 
-## 🧩 Módulos HTML
+## 🧩 Modulos HTML
 
 El `index.html` está organizado en **7 módulos** claramente delimitados con comentarios de bloque:
 
@@ -123,7 +123,7 @@ MÓDULO 7 · Footer
 
 ---
 
-## ✨ Características
+## ✨ Caracteristicas
 
 ### Animaciones artísticas
 
@@ -157,7 +157,7 @@ MÓDULO 7 · Footer
 
 ---
 
-## ▶️ Cómo ejecutar
+## ▶️ Como ejecutar
 
 ### Opción 1 — Live Server (VS Code) ⭐ Recomendada
 
@@ -185,7 +185,7 @@ Doble clic en `index.html` — funciona sin servidor (no usa fetch/módulos ES).
 
 ---
 
-## 🎨 Personalización
+## 🎨 Personalizacion
 
 ### Cambiar colores
 
