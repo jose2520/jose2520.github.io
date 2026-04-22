@@ -6,6 +6,32 @@
   Theme handling is delegated to `theme.js` which listens for `modulesLoaded`.
   The rest of this script depends on modules injected dynamically, so run
 
+    /* ── HAMBURGER MENU ───────────────────────────────────────────── */
+  const hamburger = document.getElementById('hamburger'); // Corregido: 'const'
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    
+    // Actualización de accesibilidad
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+  });
+
+  // Cerrar el menú al hacer clic en un enlace
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+}
+
+
 
 /* ── SCROLL REVEAL ────────────────────────────────────────────── */
 const revealEls = document.querySelectorAll('.reveal');
