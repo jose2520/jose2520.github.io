@@ -54,7 +54,16 @@ function tryInitForm() {
 	const btnText = form.querySelector('.btn-text');
 	const btnLoading = form.querySelector('.btn-loading');
 	const successEl = document.getElementById('formSuccess');
+	const tiempoInput = form.elements['time'];
 
+	// Autocompletar el tiempo cuando el formulario está listo
+	if (tiempoInput) {
+		const now = new Date();
+		tiempoInput.value = now.toLocaleString('es-CO', {
+			dateStyle: 'short',
+			timeStyle: 'short',
+		});
+	}
 
 	// Helpers para estado UI
 	function showLoading() {
@@ -75,14 +84,17 @@ function tryInitForm() {
 			return;
 		}
 
-		const nombre = (form.from_name && form.from_name.value) ? form.from_name.value.trim() : '';
-		const email = (form.reply_to && form.reply_to.value) ? form.reply_to.value.trim() : '';
-		const mensaje = (form.message && form.message.value) ? form.message.value.trim() : '';
+		const nombre = form.elements['name']?.value.trim() || '';
+		const email = form.elements['reply_to']?.value.trim() || '';
+		const mensaje = form.elements['message']?.value.trim() || '';
+		const tiempo = form.elements['time']?.value.trim() || '';
+
+		console.debug('Contact form values:', { nombre, email, mensaje, tiempo });
 
 		// Mostrar loading
 		showLoading();
 
-		// Envío usando sendForm (envía los campos por su atributo name)
+		// Envío usando sendForm (envía todos los campos del formulario por su atributo name)
 		emailjs.sendForm('service_1325', 'template_1325', form)
 			.then(function () {
 				hideLoading();

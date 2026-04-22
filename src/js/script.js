@@ -85,30 +85,8 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 /* ── CONTACT FORM ─────────────────────────────────────────────── */
-const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = contactForm.querySelector('.btn-send');
-    const text = btn.querySelector('.btn-text');
-    const loading = btn.querySelector('.btn-loading');
-
-    text.style.display = 'none';
-    loading.style.display = 'flex';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      text.style.display = 'flex';
-      loading.style.display = 'none';
-      btn.disabled = false;
-      formSuccess.classList.add('show');
-      contactForm.reset();
-      setTimeout(() => formSuccess.classList.remove('show'), 4000);
-    }, 1800);
-  });
-}
+// El envío real del formulario se maneja en src/js/forms.js usando EmailJS.
+// Este bloque no debe interceptar el submit para evitar conflicto con forms.js.
 
 /* ── SMOOTH ACTIVE NAV ────────────────────────────────────────── */
 const sections = document.querySelectorAll('section[id]');

@@ -95,37 +95,8 @@
 
 
   /* ── CONTACT FORM HANDLING ────────────────────────────────────– */
-  const contactForm = document.getElementById("contactForm");
-  const formSuccess = document.getElementById("formSuccess");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const btn = contactForm.querySelector(".btn-send");
-      const text = btn.querySelector(".btn-text");
-      const loading = btn.querySelector(".btn-loading");
-
-      if (text && loading) {
-        text.style.display = "none";
-        loading.style.display = "flex";
-        btn.disabled = true;
-
-        // Simulate sending (replace with actual API call)
-        setTimeout(() => {
-          text.style.display = "flex";
-          loading.style.display = "none";
-          btn.disabled = false;
-
-          if (formSuccess) {
-            formSuccess.classList.add("show");
-            contactForm.reset();
-            setTimeout(() => formSuccess.classList.remove("show"), 4000);
-          }
-        }, 1800);
-      }
-    });
-  }
+  // El envío real del formulario se maneja en src/js/forms.js mediante EmailJS.
+  // Este bloque se mantiene vacío para evitar manejadores duplicados.
 
   /* ── SMOOTH ACTIVE NAV ────────────────────────────────────────– */
   const sections = document.querySelectorAll("section[id]");

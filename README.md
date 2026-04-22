@@ -238,7 +238,7 @@ Pasos rápidos:
 
 1. Regístrate en https://www.emailjs.com/ y verifica tu email.
 2. Crea un Service (por ejemplo: gmail) y copia el Service ID.
-3. Crea una Template (ej. contact_form) y en la plantilla usa variables como `from_name`, `reply_to`, `message`.
+3. Crea una Template (ej. contact_form) y en la plantilla usa variables como `name`, `reply_to`, `message`.
 4. Copia tu User ID (aparece en el dashboard).
 5. En este repositorio:
    - Abre `index.html` y asegúrate de que existe la línea que carga el SDK:
@@ -252,7 +252,7 @@ Pasos rápidos:
 
 Notas sobre la plantilla (Template):
 
-- Asegúrate que la plantilla de EmailJS contiene las variables que usa el script (`from_name`, `reply_to`, `message`) o ajusta `templateParams` en `src/js/forms.js`.
+- Asegúrate que la plantilla de EmailJS contiene las variables que usa el script (`name`, `reply_to`, `message`) o ajusta `templateParams` en `src/js/forms.js`.
 - EmailJS tiene un plan gratuito con límites razonables para formularios personales.
 
 Si prefieres usar otro servicio (Formspree, Netlify Forms, un servidor propio o una función serverless), dímelo y adapto el código.
