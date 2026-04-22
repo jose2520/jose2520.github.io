@@ -19,6 +19,8 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 - [Autor](#-autor)
 
 
+
+
 ---
 
 ## 🖼 Vista previa
