@@ -11,10 +11,10 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 
 - [Vista previa](#-vista-previa)
 - [Tecnologías](#-Tecnologías)
-- [Estructura del proyecto](#-Estructura del proyecto)
-- [Módulos HTML](#-Módulos HTML)
+- [Estructura del proyecto](#-Estructura-del-proyecto)
+- [Módulos HTML](#-Módulos-HTML)
 - [Características](#-Características)
-- [Cómo ejecutar](#-Cómo Ejecutar)
+- [Cómo ejecutar](#-Cómo-Ejecutar)
 - [Personalización](#-Personalización)
 - [Autor](#-Autor)
 
