@@ -24,7 +24,7 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 
 |                 Modo oscuro                 |               Modo claro                |
 | :-----------------------------------------: | :-------------------------------------: |
-| Fondo negro con acentos rojos y animaciones | Fondo blanco con las mismas animaciones |
+| Fondo negro con acentos rojos y animaciones | Fondo blanco con acentos lila y las mismas animaciones |
 
 ---
 
@@ -46,7 +46,7 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 ## 📁 Estructura del proyecto
 
 ```
-portafolio2/
+jose.dev/
 ├── index.html
 ├── README.md
 ├── public/
