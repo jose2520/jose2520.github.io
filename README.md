@@ -18,6 +18,11 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 - [Personalización](#-personalización)
 - [Autor](#-autor)
 
+- [Tecnologías](#tecnologías)
+- [Módulos HTML](#módulos-html)
+- [Características](#características)
+- [Cómo ejecutar](#cómo-ejecutar)
+- [Personalización](#personalización)
 
 
 
