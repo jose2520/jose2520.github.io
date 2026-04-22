@@ -14,7 +14,7 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 - [Estructura del proyecto](#-Estructura-del-proyecto)
 - [Módulos HTML](#-Módulos-HTML)
 - [Características](#-Características)
-- [Cómo ejecutar](#-Cómo-Ejecutar)
+- [Cómo ejecutar](#-Cómo-ejecutar)
 - [Personalización](#-Personalización)
 - [Autor](#-Autor)
 
