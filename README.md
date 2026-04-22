@@ -265,7 +265,7 @@ Si prefieres usar otro servicio (Formspree, Netlify Forms, un servidor propio o 
 
 - 📧 josedelcarmen_diaz@outlook.com
 - 📍 Barranquilla, Colombia 🇨🇴
-- 💼 [LinkedIn](https://linkedin.com/in/josediaz)
+- 💼 [LinkedIn](https://www.linkedin.com/in/jose-de-carmen-d-901b39a4?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 - 🐙 [GitHub](https://github.com/josediaz)
 
 ---
