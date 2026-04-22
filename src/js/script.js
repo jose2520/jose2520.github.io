@@ -6,7 +6,8 @@
   Theme handling is delegated to `theme.js` which listens for `modulesLoaded`.
   The rest of this script depends on modules injected dynamically, so run
 
-    /* ── HAMBURGER MENU ───────────────────────────────────────────── */
+    
+  /* ── HAMBURGER MENU ───────────────────────────────────────────── */
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
 
@@ -19,6 +20,17 @@
       hamburger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
       mobileMenu.setAttribute('aria-hidden', expanded ? 'false' : 'true');
     });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
 
 
 
