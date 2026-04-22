@@ -4,14 +4,14 @@
  */
 
 const modules = [
-  { id: "mod-background", file: "src/html/modules/mod-background.html" },
-  { id: "mod-nav", file: "src/html/modules/mod-nav.html" },
-  { id: "mod-hero", file: "src/html/modules/mod-hero.html" },
-  { id: "mod-about", file: "src/html/modules/mod-about.html" },
-  { id: "mod-tools", file: "src/html/modules/mod-tools.html" },
-  { id: "mod-projects", file: "src/html/modules/mod-projects.html" },
-  { id: "mod-contact", file: "src/html/modules/mod-contact.html" },
-  { id: "mod-footer", file: "src/html/modules/mod-footer.html" },
+  { id: "mod-background", file: "src/view/modules/mod-background.html" },
+  { id: "mod-nav", file: "src/view/modules/mod-nav.html" },
+  { id: "mod-hero", file: "src/view/modules/mod-hero.html" },
+  { id: "mod-about", file: "src/view/modules/mod-about.html" },
+  { id: "mod-tools", file: "src/view/modules/mod-tools.html" },
+  { id: "mod-projects", file: "src/view/modules/mod-projects.html" },
+  { id: "mod-contact", file: "src/view/modules/mod-contact.html" },
+  { id: "mod-footer", file: "src/view/modules/mod-footer.html" },
 ];
 
 async function loadModule(module) {

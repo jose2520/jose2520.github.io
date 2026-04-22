@@ -60,7 +60,7 @@ portafolio2/
 │   │   ├── main.css
 │   │   ├── modules.css
 │   │   └── styles.css
-│   ├── html/
+│   ├── view/
 │   │   └── modules/
 │   │       ├── mod-about.html
 │   │       ├── mod-background.html
