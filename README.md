@@ -10,13 +10,14 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 ## 📋 Tabla de contenidos
 
 - [Vista previa](#-vista-previa)
-- [Tecnologías](#-Tecnologías)
-- [Estructura del proyecto](#-Estructura-del-proyecto)
-- [Módulos HTML](#-Módulos-HTML)
-- [Características](#-Características)
-- [Cómo ejecutar](#-Cómo-ejecutar)
-- [Personalización](#-Personalización)
-- [Autor](#-Autor)
+- [Tecnologías](#-tecnologías)
+- [Estructura del proyecto](#-estructura-del-proyecto)
+- [Módulos HTML](#-módulos-html)
+- [Características](#-características)
+- [Cómo ejecutar](#-cómo-ejecutar)
+- [Personalización](#-personalización)
+- [Autor](#-autor)
+
 
 ---
 
