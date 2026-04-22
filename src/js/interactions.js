@@ -8,13 +8,26 @@
   "use strict";
 
   /* ── HAMBURGER MENU ────────────────────────────────────────────– */
-  const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobileMenu");
+  function tryInitHamburgerMenu() {
+    if (window.__hamburgerMenuInitDone) return;
 
-  if (hamburger && mobileMenu) {
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (!hamburger || !mobileMenu) return;
+    window.__hamburgerMenuInitDone = true;
+
+    // Set initial ARIA state
+    hamburger.setAttribute("aria-expanded", "false");
+    mobileMenu.setAttribute("aria-hidden", "true");
+
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("open");
       mobileMenu.classList.toggle("open");
+
+      const isOpen = hamburger.classList.contains("open");
+      hamburger.setAttribute("aria-expanded", isOpen.toString());
+      mobileMenu.setAttribute("aria-hidden", (!isOpen).toString());
     });
 
     // Close mobile menu on link click
@@ -22,9 +35,15 @@
       a.addEventListener("click", () => {
         hamburger.classList.remove("open");
         mobileMenu.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden", "true");
       });
     });
   }
+
+  document.addEventListener("DOMContentLoaded", tryInitHamburgerMenu);
+  document.addEventListener("modulesLoaded", tryInitHamburgerMenu);
+  tryInitHamburgerMenu();
 
   /* ── NAVBAR SCROLL EFFECT ──────────────────────────────────────– */
   const navbar = document.getElementById("navbar");
