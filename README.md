@@ -50,58 +50,61 @@ Built 100% with **HTML · pure CSS · vanilla JavaScript** — no frameworks, no
 ## 📁 Project structure
 
 ```
-jose.dev/
-├── index.html
-├── README.md
-├── public/
-│   └── img/
-│       ├── profile/
-│       └── projects/
-├── src/
-│   ├── css/
-│   │   ├── base/
-│   │   │   ├── reset.css
-│   │   │   └── base.css
-│   │   ├── themes/
-│   │   │   └── variables.css
-│   │   ├── components/
-│   │   │   ├── navbar.css
-│   │   │   ├── hero.css
-│   │   │   ├── about.css
-│   │   │   ├── tools.css
-│   │   │   ├── projects.css
-│   │   │   ├── contact.css
-│   │   │   └── footer.css
-│   │   ├── utilities/
-│   │   │   ├── utilities.css
-│   │   │   └── effects.css
-│   │   └── animations/
-│   │       ├── animations.css
-│   │       ├── cursor.css
-│   │       └── responsive.css
-│   ├── view/
-│   │   ├── mod-about.html
-│   │   ├── mod-background.html
-│   │   ├── mod-contact.html
-│   │   ├── mod-footer.html
-│   │   ├── mod-hero.html
-│   │   ├── mod-nav.html
-│   │   ├── mod-projects.html
-│   │   └── mod-tools.html
-│   └── js/
-│       ├── core/
-│       │   ├── core.js
-│       │   ├── interactions.js
-│       │   └── modules.js
-│       ├── features/
-│       │   ├── canvas.js
-│       │   ├── decorations.js
-│       │   ├── smooth-nav.js
-│       │   ├── theme.js
-│       │   └── typing-effect.js
-│       └── utils/
-│           ├── cursor.js
-│           └── forms.js
+jose.dev/ 🎯 Root
+├── 🌐 index.html              (Main entry point)
+├── 📖 README.md               (Project documentation)
+├── 📦 public/                 (Static public assets)
+│   └── 🖼️  img/
+│       ├── 👤 profile/        (Profile images)
+│       └── 🎨 projects/       (Project images)
+│
+├── 🎨 src/                    (Source code)
+│   ├── 🎭 css/
+│   │   ├── 🔌 base/           (Reset and base styles)
+│   │   │   ├── 🔄 reset.css
+│   │   │   └── 🎯 base.css
+│   │   ├── 🌈 themes/         (CSS variables - colors and themes)
+│   │   │   └── 🎨 variables.css
+│   │   ├── 🧩 components/     (Section-specific styles)
+│   │   │   ├── 📱 navbar.css  (Navigation)
+│   │   │   ├── ✨ hero.css    (Hero section)
+│   │   │   ├── 👋 about.css   (About section)
+│   │   │   ├── 🛠️  tools.css  (Tools & tech)
+│   │   │   ├── 📂 projects.css (Projects section)
+│   │   │   ├── 💬 contact.css (Contact section)
+│   │   │   └── 🔗 footer.css  (Footer layout)
+│   │   ├── ⚡ utilities/      (Utility classes)
+│   │   │   ├── 🎯 utilities.css
+│   │   │   └── ✨ effects.css
+│   │   └── 🎬 animations/     (Animations and responsive)
+│   │       ├── 🌊 animations.css
+│   │       ├── 🎪 cursor.css
+│   │       └── 📱 responsive.css
+│   │
+│   ├── 📄 view/               (HTML modules - loaded dynamically)
+│   │   ├── 🔺 mod-hero.html
+│   │   ├── 👤 mod-about.html
+│   │   ├── 🛠️  mod-tools.html
+│   │   ├── 📂 mod-projects.html
+│   │   ├── 💬 mod-contact.html
+│   │   ├── 📱 mod-nav.html
+│   │   ├── 🔗 mod-footer.html
+│   │   └── 🎨 mod-background.html
+│   │
+│   └── ⚙️  js/                (JavaScript logic)
+│       ├── 🔥 core/           (Core functionality)
+│       │   ├── 🎯 core.js     (Main initialization)
+│       │   ├── 🖱️  interactions.js (User event handlers)
+│       │   └── 🧩 modules.js  (Module loader)
+│       ├── 🎪 features/       (Feature-specific logic)
+│       │   ├── 🎨 canvas.js   (Canvas background - node grid)
+│       │   ├── ✨ decorations.js (Floating particles)
+│       │   ├── 🔄 smooth-nav.js (Smooth scrolling)
+│       │   ├── 🌙 theme.js    (Dark/Light mode)
+│       │   └── ⌨️  typing-effect.js (Typing effect)
+│       └── 🔧 utils/          (Utilities)
+│           ├── 🎪 cursor.js   (Cursor styling)
+│           └── 📝 forms.js    (Form validation)
 ```
 
 ### 🏗 Architecture overview
