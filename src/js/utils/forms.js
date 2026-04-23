@@ -1,8 +1,7 @@
-// forms.js - Validación y envío de contacto (EmailJS)
-// Implementa envío desde el cliente usando EmailJS.
+// forms.js - Validación y envío de formulario de contacto usando EmailJS.
+// Implementa envío desde el cliente con validación y manejo de errores.
 // INSTRUCCIONES: Regístrate en https://www.emailjs.com/, crea un Service ID y un Template ID,
 // y copia tu User ID. Sustituye los placeholders en este archivo por esos valores.
-
 
 // Inicializar el formulario solo cuando el módulo HTML esté en el DOM.
 // Modules are loaded asynchronously by modules.js which dispatches a `modulesLoaded` event.

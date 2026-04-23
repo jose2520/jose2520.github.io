@@ -1,0 +1,102 @@
+/* ================================================================
+  JOSE.DEV — CSS Modular Architecture
+  File: responsive.css
+  Purpose: Diseño responsivo con media queries — ajustes para móviles, tablets y pantallas pequeñas.
+   ================================================================ */
+
+/* ── RESPONSIVE DESIGN ────────────────────────────────────────– */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content .hero-tag {
+    justify-content: center;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-image-wrap {
+    height: 360px;
+  }
+
+  .ring1 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .ring2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .ring1 .orbit-icon {
+    --r: 170px;
+  }
+
+  .ring2 .orbit-icon {
+    --r: 230px;
+  }
+
+  .hero-photo-frame {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-avatar {
+    font-size: 4rem;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tools-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+}

@@ -1,3 +1,4 @@
+<!-- Archivo principal del portafolio web de Jose Diaz. Define la estructura HTML, carga módulos dinámicos y scripts organizados. -->
 <!doctype html>
 <html lang="es" data-theme="dark">
      <!-- ══════════════════════════════[ HEAD — Meta, Fuentes, Estilos]══════════════════════════════ -->
@@ -19,12 +20,22 @@
                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           />
 
-          <!-- [ Estilos modulares - Orden de carga: Base → Layout → Módulos → Animaciones ] -->
-          <link rel="stylesheet" href="src/css/main.css" />
-          <link rel="stylesheet" href="src/css/layout.css" />
-          <link rel="stylesheet" href="src/css/modules.css" />
-          <link rel="stylesheet" href="src/css/animations.css" />
-          <link rel="stylesheet" href="src/css/cursor.css" />
+          <!-- [ Estilos modulares organizados - Orden de carga: Base → Themes → Components → Utilities → Animations ] -->
+          <link rel="stylesheet" href="src/css/base/reset.css" />
+          <link rel="stylesheet" href="src/css/themes/variables.css" />
+          <link rel="stylesheet" href="src/css/base/base.css" />
+          <link rel="stylesheet" href="src/css/utilities/utilities.css" />
+          <link rel="stylesheet" href="src/css/utilities/effects.css" />
+          <link rel="stylesheet" href="src/css/components/navbar.css" />
+          <link rel="stylesheet" href="src/css/components/hero.css" />
+          <link rel="stylesheet" href="src/css/components/about.css" />
+          <link rel="stylesheet" href="src/css/components/tools.css" />
+          <link rel="stylesheet" href="src/css/components/projects.css" />
+          <link rel="stylesheet" href="src/css/components/contact.css" />
+          <link rel="stylesheet" href="src/css/components/footer.css" />
+          <link rel="stylesheet" href="src/css/animations/animations.css" />
+          <link rel="stylesheet" href="src/css/animations/cursor.css" />
+          <link rel="stylesheet" href="src/css/animations/responsive.css" />
      </head>
 
      <!-- ══════════════════════════════[ BODY ]══════════════════════════════ -->
@@ -72,18 +83,21 @@
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-footer"></div>
 
-          <!-- Contenido cargado dinámicamente desde src/js/modules.js -->
+          <!-- Contenido cargado dinámicamente desde src/js/core/modules.js -->
           <!-- Cada módulo HTML se inyecta en su contenedor correspondiente con fetch() -->
-          <!-- ══════════════════════════════[ SCRIPTS ]═════════════════════════════ -->
-          <script src="src/js/core.js"></script>
-          <script src="src/js/interactions.js"></script>
-          <script src="src/js/theme.js"></script>
-          <script src="src/js/script.js"></script>
-          <script src="src/js/modules.js"></script>
-          <script src="src/js/canvas.js"></script>
+          <!-- ══════════════════════════════[ SCRIPTS ORGANIZADOS ]═════════════════════════════ -->
+          <!-- Orden de carga: Core → Features → Modules → Utils -->
+          <script src="src/js/core/core.js"></script>
+          <script src="src/js/core/interactions.js"></script>
+          <script src="src/js/core/modules.js"></script>
+          <script src="src/js/features/theme.js"></script>
+          <script src="src/js/features/smooth-nav.js"></script>
+          <script src="src/js/features/typing-effect.js"></script>
+          <script src="src/js/features/decorations.js"></script>
+          <script src="src/js/features/canvas.js"></script>
           <!-- EmailJS SDK (necesario para envío de emails desde el cliente) -->
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-          <script src="src/js/forms.js"></script>
-          <script src="src/js/cursor.js"></script>
+          <script src="src/js/utils/forms.js"></script>
+          <script src="src/js/utils/cursor.js"></script>
      </body>
 </html>

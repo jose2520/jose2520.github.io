@@ -5,6 +5,8 @@
 Portfolio personal de **Jose Diaz**, Junior Developer & Imagineer.
 Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin frameworks, sin dependencias.
 
+**Arquitectura modular organizada** con separación clara entre estilos, lógica y contenido para máxima mantenibilidad y escalabilidad.
+
 ---
 
 ## 📋 Tabla de contenidos
@@ -14,7 +16,9 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 - [Estructura del proyecto](#-estructura-del-proyecto)
 - [Módulos HTML](#-modulos-html)
 - [Características](#-caracteristicas)
+- [Rendimiento y Arquitectura](#-rendimiento-y-arquitectura)
 - [Como ejecutar](#-como-ejecutar)
+- [Desarrollo](#-desarrollo)
 - [Personalización](#-personalizacion)
 - [Autor](#-autor)
 
@@ -30,14 +34,14 @@ Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin framework
 
 ## 🛠 Tecnologias
 
-| Capa         | Tecnología                                     | Versión      |
-| ------------ | ---------------------------------------------- | ------------ |
-| Estructura   | HTML5 semántico                                | —            |
-| Estilos      | CSS3 puro (variables, animaciones, grid, flex) | —            |
-| Lógica       | JavaScript ES6+ vanilla                        | —            |
-| Iconos       | Font Awesome                                   | 6.5.1        |
-| Fuentes      | Space Grotesk + Fira Code                      | Google Fonts |
-| Servidor dev | Live Server / npx serve                        | —            |
+| Capa         | Tecnología                                     | Detalles                                      |
+| ------------ | ---------------------------------------------- | --------------------------------------------- |
+| Estructura   | HTML5 semántico                                | Módulos organizados en archivos separados     |
+| Estilos      | CSS3 puro (variables, animaciones, grid, flex) | Arquitectura modular en 5 capas (base/themes/components/utilities/animations) |
+| Lógica       | JavaScript ES6+ vanilla                        | Código modular en 3 capas (core/features/utils) |
+| Iconos       | Font Awesome                                   | 6.5.1                                         |
+| Fuentes      | Space Grotesk + Fira Code                      | Google Fonts                                  |
+| Servidor dev | Live Server / npx serve                        | Despliegue local sin build tools             |
 
 > ⚠️ **Sin React · Sin Tailwind · Sin jQuery · Sin build step.**
 
@@ -55,30 +59,68 @@ jose.dev/
 │       └── projects/
 ├── src/
 │   ├── css/
-│   │   ├── animations.css
-│   │   ├── layout.css
-│   │   ├── main.css
-│   │   ├── modules.css
-│   │   └── styles.css
+│   │   ├── base/
+│   │   │   ├── reset.css
+│   │   │   └── base.css
+│   │   ├── themes/
+│   │   │   └── variables.css
+│   │   ├── components/
+│   │   │   ├── navbar.css
+│   │   │   ├── hero.css
+│   │   │   ├── about.css
+│   │   │   ├── tools.css
+│   │   │   ├── projects.css
+│   │   │   ├── contact.css
+│   │   │   └── footer.css
+│   │   ├── utilities/
+│   │   │   ├── utilities.css
+│   │   │   └── effects.css
+│   │   └── animations/
+│   │       ├── animations.css
+│   │       ├── cursor.css
+│   │       └── responsive.css
 │   ├── view/
-│   │   └── modules/
-│   │       ├── mod-about.html
-│   │       ├── mod-background.html
-│   │       ├── mod-contact.html
-│   │       ├── mod-footer.html
-│   │       ├── mod-hero.html
-│   │       ├── mod-nav.html
-│   │       ├── mod-projects.html
-│   │       └── mod-tools.html
+│   │   ├── mod-about.html
+│   │   ├── mod-background.html
+│   │   ├── mod-contact.html
+│   │   ├── mod-footer.html
+│   │   ├── mod-hero.html
+│   │   ├── mod-nav.html
+│   │   ├── mod-projects.html
+│   │   └── mod-tools.html
 │   └── js/
-│       ├── canvas.js
-│       ├── core.js
-│       ├── forms.js
-│       ├── interactions.js
-│       ├── modules.js
-│       ├── script.js
-│       └── theme.js
+│       ├── core/
+│       │   ├── core.js
+│       │   ├── interactions.js
+│       │   └── modules.js
+│       ├── features/
+│       │   ├── canvas.js
+│       │   ├── decorations.js
+│       │   ├── smooth-nav.js
+│       │   ├── theme.js
+│       │   └── typing-effect.js
+│       └── utils/
+│           ├── cursor.js
+│           └── forms.js
 ```
+
+### 🏗️ Arquitectura Modular
+
+El proyecto utiliza una **arquitectura modular organizada** para mantener el código limpio y escalable:
+
+- **CSS organizado en 5 capas:**
+  - `base/` → Reset y estilos base (HTML/body)
+  - `themes/` → Variables de color y temas
+  - `components/` → Estilos específicos de cada sección
+  - `utilities/` → Clases de utilidad y efectos
+  - `animations/` → Animaciones y responsive
+
+- **JavaScript organizado en 3 capas:**
+  - `core/` → Funcionalidad núcleo (scroll, módulos, interacciones)
+  - `features/` → Características específicas (canvas, tema, navegación)
+  - `utils/` → Utilidades (formularios, cursor)
+
+- **HTML modular:** Los módulos están directamente en `src/view/` para acceso directo
 
 ---
 
@@ -155,6 +197,15 @@ MÓDULO 7 · Footer
 - Etiquetas `<article>` para tarjetas de proyecto
 - `<header>`, `<footer>`, `<nav>` semánticos
 
+### Rendimiento y Arquitectura
+
+- **Carga modular inteligente** — Módulos HTML cargados dinámicamente con fetch
+- **CSS optimizado** — Variables CSS para temas, arquitectura en capas
+- **JavaScript eficiente** — IntersectionObserver para animaciones, carga secuencial
+- **Sin dependencias externas** — Todo vanilla, sin frameworks pesados
+- **Caché inteligente** — Headers de control de caché en módulos críticos
+- **Separación de responsabilidades** — CSS/JS/HTML claramente delimitados
+
 ---
 
 ## ▶️ Como ejecutar
@@ -185,18 +236,59 @@ Doble clic en `index.html` — funciona sin servidor (no usa fetch/módulos ES).
 
 ---
 
+## 🛠️ Desarrollo
+
+### Verificar estructura
+
+Para verificar que todos los archivos están en su lugar correcto:
+
+```bash
+# Contar archivos por tipo
+find src/css -name "*.css" | wc -l    # Debe ser 15
+find src/js -name "*.js" | wc -l     # Debe ser 10
+find src/view -name "*.html" | wc -l # Debe ser 8
+
+# Ver estructura completa
+find src/ -type f | sort
+```
+
+### Comandos útiles
+
+```bash
+# Iniciar servidor de desarrollo
+python3 -m http.server 8000
+
+# Verificar que todos los archivos sean accesibles
+curl -I http://localhost:8000/index.html
+
+# Buscar archivos duplicados
+find . -name "*.js" -o -name "*.css" | sort | uniq -d
+```
+
+---
+
 ## 🎨 Personalizacion
 
 ### Cambiar colores
 
-En `src/css/styles.css`, línea ~3:
+En `src/css/themes/variables.css`, modifica las variables CSS:
 
 ```css
 :root {
   --red: #e63946; /* ← color de acento principal */
   --red-dark: #c1121f; /* ← hover de botones */
+  --bg: #0b0b0f; /* ← color de fondo */
+  --text: #f0f0f8; /* ← color de texto */
 }
 ```
+
+### Agregar nueva sección
+
+1. **Crear archivo CSS** en `src/css/components/nueva-seccion.css`
+2. **Crear módulo HTML** en `src/view/mod-nueva-seccion.html`
+3. **Agregar funcionalidad JS** en `src/js/features/nueva-feature.js`
+4. **Actualizar index.html** con los nuevos links
+5. **Importar en modules.js** con la prioridad correspondiente
 
 ### Cambiar contenido personal
 

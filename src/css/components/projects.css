@@ -1,0 +1,324 @@
+/* ================================================================
+  JOSE.DEV — CSS Modular Architecture
+  File: projects.css
+  Purpose: Estilos de la sección Projects — tarjetas de proyectos con overlays y tags tecnológicos.
+   ================================================================ */
+
+/* ── PROJECTS SECTION ──────────────────────────────────────────– */
+.projects {
+  padding: 6rem 0;
+  background: var(--bg);
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    border-color 0.3s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    0 0 30px var(--red-soft);
+  border-color: var(--red);
+}
+
+.project-image {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pi1 {
+  background: linear-gradient(135deg, #1a0a0a, #2d0f0f);
+}
+.pi2 {
+  background: linear-gradient(135deg, #0a0a1a, #0f102d);
+}
+.pi3 {
+  background: linear-gradient(135deg, #0a1a0a, #0f2d10);
+}
+.pi4 {
+  background: linear-gradient(135deg, #1a0a1a, #2d0f2d);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.plink {
+  width: 44px;
+  height: 44px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.plink:hover {
+  transform: scale(1.15);
+  background: var(--red-dark);
+}
+
+/* Project Art Animations */
+.project-screen-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-art-icon {
+  font-size: 3rem;
+  color: var(--red);
+  opacity: 0.6;
+  animation: artPulse 3s ease infinite;
+}
+
+@keyframes artPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+.art-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 80px;
+}
+
+.art-line {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  animation: lineGrow 2s ease infinite;
+}
+
+.art-line:nth-child(2) {
+  animation-delay: 0.3s;
+  width: 65%;
+}
+.art-line:nth-child(3) {
+  animation-delay: 0.6s;
+  width: 80%;
+}
+
+@keyframes lineGrow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.art-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.art-dots span {
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: dotBlink 1.5s ease infinite;
+}
+
+.art-dots span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.art-dots span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dotBlink {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.3);
+  }
+}
+
+.art-bars {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  height: 30px;
+}
+
+.art-bars span {
+  width: 8px;
+  background: var(--red);
+  border-radius: 2px 2px 0 0;
+  opacity: 0.6;
+  animation: barGrow 1.5s ease infinite;
+}
+
+.art-bars span:nth-child(1) {
+  height: 60%;
+  animation-delay: 0s;
+}
+.art-bars span:nth-child(2) {
+  height: 100%;
+  animation-delay: 0.2s;
+}
+.art-bars span:nth-child(3) {
+  height: 40%;
+  animation-delay: 0.4s;
+}
+.art-bars span:nth-child(4) {
+  height: 80%;
+  animation-delay: 0.6s;
+}
+
+@keyframes barGrow {
+  0%,
+  100% {
+    transform: scaleY(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1.1);
+    opacity: 0.9;
+  }
+}
+
+.art-pulse {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: pulsRing 2s ease infinite;
+}
+
+@keyframes pulsRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.project-body {
+  padding: 1.3rem;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.ptag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: var(--font-code);
+}
+
+.ptag.react {
+  background: rgba(97, 218, 251, 0.15);
+  color: #61dafb;
+}
+.ptag.node {
+  background: rgba(104, 160, 99, 0.15);
+  color: #68a063;
+}
+.ptag.vue {
+  background: rgba(65, 184, 131, 0.15);
+  color: #41b883;
+}
+.ptag.api {
+  background: rgba(255, 165, 0, 0.15);
+  color: orange;
+}
+.ptag.js {
+  background: rgba(247, 223, 30, 0.15);
+  color: #f7df1e;
+}
+.ptag.css {
+  background: rgba(21, 114, 182, 0.15);
+  color: #1572b6;
+}
+.ptag.python {
+  background: rgba(55, 118, 171, 0.15);
+  color: #3776ab;
+}
+
+.project-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.project-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}

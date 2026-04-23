@@ -1,0 +1,218 @@
+/* ================================================================
+  JOSE.DEV — CSS Modular Architecture
+  File: about.css
+  Purpose: Estilos de la sección About — historia personal, especialidades y decoraciones.
+   ================================================================ */
+
+/* ── ABOUT SECTION ────────────────────────────────────────────– */
+.about {
+  padding: 6rem 0 4rem;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-heading {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.underline-animated {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animated::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--red);
+  border-radius: 2px;
+  transform-origin: left;
+  animation: underlineDraw 2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s forwards;
+  transform: scaleX(0);
+}
+
+@keyframes underlineDraw {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.about-decoration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.deco-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  max-width: 60px;
+}
+
+.deco-icon {
+  color: var(--red);
+  font-size: 1.4rem;
+}
+
+/* Skills Chips */
+.about-skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--red-soft);
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  transition:
+    background 0.25s,
+    transform 0.2s;
+}
+
+.chip:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* About Card */
+.about-card {
+  background: var(--card);
+  border: 1.5px solid var(--red);
+  border-radius: var(--radius);
+  padding: 2rem 2rem 1.5rem;
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+
+.about-card:hover {
+  box-shadow: 0 0 40px var(--red-glow);
+}
+
+.about-card-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--red);
+  border-style: solid;
+}
+
+.tl {
+  top: -3px;
+  left: -3px;
+  border-width: 3px 0 0 3px;
+}
+.tr {
+  top: -3px;
+  right: -3px;
+  border-width: 3px 3px 0 0;
+}
+.bl {
+  bottom: -3px;
+  left: -3px;
+  border-width: 0 0 3px 3px;
+}
+.br {
+  bottom: -3px;
+  right: -3px;
+  border-width: 0 3px 3px 0;
+}
+
+.typing-cursor-container {
+  margin-bottom: 1.2rem;
+}
+
+.typing-label {
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+  color: var(--red);
+  opacity: 0.7;
+}
+
+.about-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-card p em {
+  color: var(--red);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.about-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.about-tags i {
+  color: var(--red);
+}
+
+/* Binary Strip Animation */
+.binary-strip {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.binary-strip span {
+  display: inline-block;
+  font-family: var(--font-code);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 2px;
+  animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

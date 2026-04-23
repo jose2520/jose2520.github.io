@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: interactions.js
-    Purpose: Form validation, scroll effects, event listeners
+    Purpose: Validación de formularios, efectos de scroll, listeners de eventos y menú hamburguesa.
    ================================================================ */
 
 (function initInteractions() {

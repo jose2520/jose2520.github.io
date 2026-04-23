@@ -1,0 +1,14 @@
+/* ================================================================
+  JOSE.DEV — CSS Modular Architecture
+  File: reset.css
+  Purpose: CSS reset and base styles — normaliza elementos HTML para consistencia cross-browser.
+   ================================================================ */
+
+/* ── RESET & BASE ──────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
