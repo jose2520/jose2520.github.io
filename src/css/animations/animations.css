@@ -388,7 +388,7 @@
   }
 }
 
-/* ── LOADING SPINNER (para formulario) ──────────────────────––  */
+/* ── LOADING SPINNER (for form) ──────────────────────––  */
 .btn-loading {
   display: none;
   align-items: center;

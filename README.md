@@ -1,53 +1,53 @@
-# 🚀 Jose.dev — Portfolio Personal
+# 🚀 Jose.dev — Personal Portfolio
 
-> _"No solo escribo código, cuento historias a través de interfaces vibrantes."_
+> _"I don't just write code, I tell stories through vibrant interfaces."_
 
-Portfolio personal de **Jose Diaz**, Junior Developer & Imagineer.
-Construido 100% con **HTML · CSS puro · JavaScript vanilla** — sin frameworks, sin dependencias.
+Personal portfolio of **Jose Diaz**, Junior Developer & Imagineer.
+Built 100% with **HTML · pure CSS · vanilla JavaScript** — no frameworks, no dependencies.
 
-**Arquitectura modular organizada** con separación clara entre estilos, lógica y contenido para máxima mantenibilidad y escalabilidad.
-
----
-
-## 📋 Tabla de contenidos
-
-- [Vista previa](#-vista-previa)
-- [Tecnologías](#-tecnologias)
-- [Estructura del proyecto](#-estructura-del-proyecto)
-- [Módulos HTML](#-modulos-html)
-- [Características](#-caracteristicas)
-- [Rendimiento y Arquitectura](#-rendimiento-y-arquitectura)
-- [Como ejecutar](#-como-ejecutar)
-- [Desarrollo](#-desarrollo)
-- [Personalización](#-personalizacion)
-- [Autor](#-autor)
+**Organized modular architecture** with clear separation between styles, logic, and content for maximum maintainability and scalability.
 
 ---
 
-## 🖼 Vista previa
+## 📋 Table of contents
 
-|                 Modo oscuro                 |               Modo claro                |
+- [Preview](#-preview)
+- [Technologies](#-technologies)
+- [Project structure](#-project-structure)
+- [HTML modules](#-html-modules)
+- [Features](#-features)
+- [Performance and architecture](#-performance-and-architecture)
+- [How to run](#-how-to-run)
+- [Development](#-development)
+- [Customization](#-customization)
+- [Author](#-author)
+
+---
+
+## 🖼 Preview
+
+|                 Dark mode                 |               Light mode                |
 | :-----------------------------------------: | :-------------------------------------: |
-| Fondo negro con acentos rojos y animaciones | Fondo blanco con acentos lila y las mismas animaciones |
+| Black background with red accents and animations | White background with lilac accents and the same animations |
 
 ---
 
-## 🛠 Tecnologias
+## 🛠 Technologies
 
-| Capa         | Tecnología                                     | Detalles                                      |
-| ------------ | ---------------------------------------------- | --------------------------------------------- |
-| Estructura   | HTML5 semántico                                | Módulos organizados en archivos separados     |
-| Estilos      | CSS3 puro (variables, animaciones, grid, flex) | Arquitectura modular en 5 capas (base/themes/components/utilities/animations) |
-| Lógica       | JavaScript ES6+ vanilla                        | Código modular en 3 capas (core/features/utils) |
-| Iconos       | Font Awesome                                   | 6.5.1                                         |
-| Fuentes      | Space Grotesk + Fira Code                      | Google Fonts                                  |
-| Servidor dev | Live Server / npx serve                        | Despliegue local sin build tools             |
+| Layer        | Technology                                    | Details                                      |
+| ------------ | --------------------------------------------- | --------------------------------------------- |
+| Structure    | Semantic HTML5                                | Modules organized in separate files          |
+| Styling      | Pure CSS3 (variables, animations, grid, flex) | Modular architecture in 5 layers (base/themes/components/utilities/animations) |
+| Logic        | Vanilla JavaScript ES6+                        | Modular code in 3 layers (core/features/utils) |
+| Icons        | Font Awesome                                  | v6.5.1                                       |
+| Fonts        | Space Grotesk + Fira Code                      | Google Fonts                                 |
+| Dev server   | Live Server / npx serve                        | Local deployment without build tools         |
 
-> ⚠️ **Sin React · Sin Tailwind · Sin jQuery · Sin build step.**
+> ⚠️ **No React · No Tailwind · No jQuery · No build step.**
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project structure
 
 ```
 jose.dev/
@@ -104,264 +104,263 @@ jose.dev/
 │           └── forms.js
 ```
 
-### 🏗️ Arquitectura Modular
+### 🏗 Architecture overview
 
-El proyecto utiliza una **arquitectura modular organizada** para mantener el código limpio y escalable:
+This project uses a **clean modular architecture** to keep code easy to maintain and extend:
 
-- **CSS organizado en 5 capas:**
-  - `base/` → Reset y estilos base (HTML/body)
-  - `themes/` → Variables de color y temas
-  - `components/` → Estilos específicos de cada sección
-  - `utilities/` → Clases de utilidad y efectos
-  - `animations/` → Animaciones y responsive
+- **CSS organized in 5 layers:**
+  - `base/` → reset and base styles for HTML/body
+  - `themes/` → color variables and themes
+  - `components/` → section-specific styling
+  - `utilities/` → utility classes and effects
+  - `animations/` → animations and responsive styles
 
-- **JavaScript organizado en 3 capas:**
-  - `core/` → Funcionalidad núcleo (scroll, módulos, interacciones)
-  - `features/` → Características específicas (canvas, tema, navegación)
-  - `utils/` → Utilidades (formularios, cursor)
+- **JavaScript organized in 3 layers:**
+  - `core/` → core functionality (scroll, modules, interactions)
+  - `features/` → specific features (canvas, theme, navigation)
+  - `utils/` → utilities (forms, cursor)
 
-- **HTML modular:** Los módulos están directamente en `src/view/` para acceso directo
+- **HTML modular:** modules are stored in `src/view/` for direct fetch injection.
 
 ---
 
-## 🧩 Modulos HTML
+## 🧩 HTML modules
 
-El `index.html` está organizado en **7 módulos** claramente delimitados con comentarios de bloque:
+The `index.html` file is structured as **7 clearly separated modules** with block comments:
 
 ```
-MÓDULO 0 · Capas de fondo globales
-  └── Canvas de nodos + partículas de código flotantes
+MODULE 0 · Global background layers
+  └── Node grid canvas + floating code particles
 
-MÓDULO 1 · Navegación principal
-  ├── Barra desktop (logo · links · CV · toggle tema)
-  └── Menú móvil desplegable
+MODULE 1 · Main navigation
+  ├── Desktop bar (logo · links · resume link · theme toggle)
+  └── Mobile dropdown menu
 
-MÓDULO 2 · Hero — Presentación
-  ├── Sub-módulo 2.1 → Texto, título glitch, botones, estadísticas
-  └── Sub-módulo 2.2 → Foto con órbitas, badge, snippets flotantes
+MODULE 2 · Hero — Introduction
+  ├── Sub-module 2.1 → Text, glitch title, buttons, statistics
+  └── Sub-module 2.2 → Photo with orbits, badge, floating snippets
 
-MÓDULO 3 · Sobre mí — Detrás del teclado
-  ├── Sub-módulo 3.1 → Título lateral + chips de especialidad
-  └── Sub-módulo 3.2 → Tarjeta de historia con esquinas animadas
+MODULE 3 · About me — Behind the keyboard
+  ├── Sub-module 3.1 → Side title + specialty chips
+  └── Sub-module 3.2 → Story card with animated corners
 
-MÓDULO 4 · Herramientas — Mi Caja de Juguetes
-  ├── Sub-módulo 4.1 → Lenguajes (JS, Python, PHP, TS, HTML/CSS, SQL)
-  ├── Sub-módulo 4.2 → Tecnologías (React, Node, Vue, Angular…)
-  └── Sub-módulo 4.3 → Bases de datos (MySQL, MongoDB, Firebase…)
+MODULE 4 · Tools — My toy box
+  ├── Sub-module 4.1 → Languages (JS, Python, PHP, TS, HTML/CSS, SQL)
+  ├── Sub-module 4.2 → Technologies (React, Node, Vue, Angular…)
+  └── Sub-module 4.3 → Databases (MySQL, MongoDB, Firebase…)
 
-MÓDULO 5 · Proyectos — Mis Aventuras
-  ├── Sub-módulo 5.1 → El Mercadito Digital
-  ├── Sub-módulo 5.2 → Ventana al Cielo
-  ├── Sub-módulo 5.3 → Dashboard Cosmos
-  └── Sub-módulo 5.4 → ChatBot IA
+MODULE 5 · Projects — My adventures
+  ├── Sub-module 5.1 → El Mercadito Digital
+  ├── Sub-module 5.2 → Ventana al Cielo
+  ├── Sub-module 5.3 → Dashboard Cosmos
+  └── Sub-module 5.4 → ChatBot AI
 
-MÓDULO 6 · Contacto — ¿Hacemos algo épico juntos?
-  ├── Sub-módulo 6.1 → Info de contacto (email, ubicación, redes)
-  └── Sub-módulo 6.2 → Formulario de contacto con validación
+MODULE 6 · Contact — Shall we build something epic together?
+  ├── Sub-module 6.1 → Contact info (email, location, social links)
+  └── Sub-module 6.2 → Contact form with validation
 
-MÓDULO 7 · Footer
-  └── Logo · Copyright · Redes sociales
+MODULE 7 · Footer
+  └── Logo · Copyright · social links
 ```
 
 ---
 
-## ✨ Caracteristicas
+## ✨ Features
 
-### Animaciones artísticas
+### Artistic animations
 
-- **Canvas background** — Red de nodos con símbolos de código conectados
-- **Partículas flotantes** — Snippets de código ascienden por la pantalla
-- **Efecto Glitch** — El nombre parpadea con distorsión al cargar/hover
-- **Anillos orbitales** — Iconos de tecnologías rotan alrededor de la foto
-- **Borde giratorio** — Gradiente cónico animado en el marco de la foto
-- **Snippets flotantes** — `<div>`, `const dev`, `() => {}` flotan con CSS
-- **Tira binaria** — "HELLO WORLD" en binario desplazándose
-- **Scroll reveal** — Elementos aparecen al entrar al viewport (IntersectionObserver)
-- **Tilt de tarjetas** — Inclinación 3D al mover el ratón sobre los proyectos
-- **Cursor glow** — Halo rojo sigue el cursor por toda la página
-- **Typing effect** — El label "historia.js" se escribe/borra en bucle
-- **Contadores animados** — Stats cuentan desde 0 al entrar en pantalla
-- **Shimmer** — Línea de brillo deslizante en separadores
+- **Canvas background** — node grid with connected code symbols
+- **Floating particles** — code snippet particles rise across the screen
+- **Glitch effect** — title flickers during load/hover
+- **Orbit rings** — technology icons rotate around the photo
+- **Animated border** — conic gradient ring around the hero image
+- **Floating snippets** — `<div>`, `const dev`, `() => {}` drift in CSS
+- **Binary strip** — moving "HELLO WORLD" binary strip
+- **Scroll reveal** — elements animate into view with IntersectionObserver
+- **Tilt cards** — 3D tilt on project cards when mouse moves
+- **Cursor glow** — glowing pointer ring follows the cursor
+- **Typing effect** — label types and erases in the About section
+- **Animated counters** — stats count up when visible
+- **Shimmer line** — shine effect on section separators
 
-### Modo claro / oscuro
+### Dark / light mode
 
-- Toggle en la navbar (☀️ / 🌙)
-- Variables CSS (`--bg`, `--text`, `--card`…) cambian con `[data-theme]`
-- Preferencia guardada en `localStorage`
+- Navbar theme toggle (☀️ / 🌙)
+- CSS variables (`--bg`, `--text`, `--card`, etc.) change using `[data-theme]`
+- User preference saved in `localStorage`
 
-### Accesibilidad
+### Accessibility
 
-- Atributos `aria-label`, `role`, `aria-hidden` en todos los módulos
-- `aria-live` en el mensaje de éxito del formulario
-- `aria-expanded` en el botón hamburguesa
-- Etiquetas `<article>` para tarjetas de proyecto
-- `<header>`, `<footer>`, `<nav>` semánticos
+- `aria-label`, `role`, and `aria-hidden` on modules and buttons
+- `aria-live` for the form success message
+- `aria-expanded` for the mobile hamburger menu
+- Semantic markup with `<article>`, `<header>`, `<footer>`, `<nav>` elements
 
-### Rendimiento y Arquitectura
+### Performance and architecture
 
-- **Carga modular inteligente** — Módulos HTML cargados dinámicamente con fetch
-- **CSS optimizado** — Variables CSS para temas, arquitectura en capas
-- **JavaScript eficiente** — IntersectionObserver para animaciones, carga secuencial
-- **Sin dependencias externas** — Todo vanilla, sin frameworks pesados
-- **Caché inteligente** — Headers de control de caché en módulos críticos
-- **Separación de responsabilidades** — CSS/JS/HTML claramente delimitados
+- **Smart module loading** — HTML modules are loaded dynamically with fetch
+- **Optimized CSS** — theme variables and layered architecture
+- **Efficient JavaScript** — IntersectionObserver for scroll animations and sequential loading
+- **No external dependencies** — fully vanilla, no heavyweight frameworks
+- **Cache-aware loading** — cache control headers used for critical modules
+- **Separation of concerns** — styles, scripts, and content are clearly separated
 
 ---
 
-## ▶️ Como ejecutar
+## ▶️ How to run
 
-### Opción 1 — Live Server (VS Code) ⭐ Recomendada
+### Option 1 — Live Server (VS Code) ⭐ Recommended
 
-1. Instala la extensión **Live Server** (`ritwickdey.liveserver`)
-2. Clic derecho en `index.html` → **"Open with Live Server"**
-3. Se abre en `http://127.0.0.1:5500`
+1. Install the **Live Server** extension (`ritwickdey.liveserver`)
+2. Right-click `index.html` → **Open with Live Server**
+3. Visit `http://127.0.0.1:5500`
 
-### Opción 2 — npx serve
+### Option 2 — npx serve
 
 ```bash
 npx serve . -l 3000
-# Abre → http://localhost:3000
+# Open http://localhost:3000
 ```
 
-### Opción 3 — Python
+### Option 3 — Python
 
 ```bash
 python3 -m http.server 8080
-# Abre → http://localhost:8080
+# Open http://localhost:8080
 ```
 
-### Opción 4 — Abrir directamente
-
-Doble clic en `index.html` — funciona sin servidor (no usa fetch/módulos ES).
+### Option 4 — Open directly
+Double-click `index.html` — works without a server (does not use fetch/ES modules).
 
 ---
 
-## 🛠️ Desarrollo
+## 🛠️ Development
 
-### Verificar estructura
+### Verify project structure
 
-Para verificar que todos los archivos están en su lugar correcto:
+To verify that all files are present:
 
 ```bash
-# Contar archivos por tipo
-find src/css -name "*.css" | wc -l    # Debe ser 15
-find src/js -name "*.js" | wc -l     # Debe ser 10
-find src/view -name "*.html" | wc -l # Debe ser 8
+# Count files by type
+find src/css -name "*.css" | wc -l    # Should be 15
+find src/js -name "*.js" | wc -l     # Should be 10
+find src/view -name "*.html" | wc -l # Should be 8
 
-# Ver estructura completa
+# List full source structure
 find src/ -type f | sort
 ```
 
-### Comandos útiles
+### Useful commands
 
 ```bash
-# Iniciar servidor de desarrollo
+# Start a development server
 python3 -m http.server 8000
 
-# Verificar que todos los archivos sean accesibles
+# Verify files are accessible
 curl -I http://localhost:8000/index.html
 
-# Buscar archivos duplicados
+# Find duplicated JS/CSS file names
 find . -name "*.js" -o -name "*.css" | sort | uniq -d
 ```
 
 ---
 
-## 🎨 Personalizacion
+## 🎨 Customization
 
-### Cambiar colores
+### Change colors
 
-En `src/css/themes/variables.css`, modifica las variables CSS:
+In `src/css/themes/variables.css`, update the CSS variables:
 
 ```css
 :root {
-  --red: #e63946; /* ← color de acento principal */
-  --red-dark: #c1121f; /* ← hover de botones */
-  --bg: #0b0b0f; /* ← color de fondo */
-  --text: #f0f0f8; /* ← color de texto */
+  --red: #e63946; /* ← main accent color */
+  --red-dark: #c1121f; /* ← button hover color */
+  --bg: #0b0b0f; /* ← background color */
+  --text: #f0f0f8; /* ← text color */
 }
 ```
 
-### Agregar nueva sección
+### Add a new section
 
-1. **Crear archivo CSS** en `src/css/components/nueva-seccion.css`
-2. **Crear módulo HTML** en `src/view/mod-nueva-seccion.html`
-3. **Agregar funcionalidad JS** en `src/js/features/nueva-feature.js`
-4. **Actualizar index.html** con los nuevos links
-5. **Importar en modules.js** con la prioridad correspondiente
+1. **Create a CSS file** at `src/css/components/new-section.css`
+2. **Create an HTML module** at `src/view/mod-new-section.html`
+3. **Add JS functionality** at `src/js/features/new-feature.js`
+4. **Update `index.html`** with the new links
+5. **Import the module in `modules.js`** with the appropriate priority
 
-### Cambiar contenido personal
+### Update personal content
 
-Editar directamente en `index.html`:
+Edit directly in the HTML modules and `index.html`:
 
-- **Nombre** → `data-text="Jose Diaz"` y texto del `<span class="hero-name">`
-- **Descripción** → `<p class="hero-desc">`
+- **Name** → `data-text="Jose Diaz"` and the `<span class="hero-name">` text
+- **Description** → `<p class="hero-desc">`
 - **Stats** → `data-count="20"`, `data-count="3"`, `data-count="10"`
-- **Email** → `href="mailto:..." ` en el módulo 6
-- **Proyectos** → Módulo 5, sub-módulos 5.1 – 5.4
-- **Herramientas** → Módulo 4, sub-módulos 4.1 – 4.3
+- **Email** → `href="mailto:..."` in the contact module
+- **Projects** → Module 5, sub-modules 5.1 – 5.4
+- **Tools** → Module 4, sub-modules 4.1 – 4.3
 
-### Agregar foto real
+### Add a real photo
 
-Reemplaza el avatar en el Módulo 2.2:
+Replace the avatar in Module 2.2:
 
 ```html
-<!-- Cambiar esto: -->
+<!-- Change this: -->
 <div class="hero-avatar">
   <i class="fas fa-user-astronaut"></i>
 </div>
 
-<!-- Por esto: -->
+<!-- To this: -->
 <div class="hero-avatar">
-  <img src="public/img/foto.jpg" alt="Jose Diaz" />
+  <img src="public/img/photo.jpg" alt="Jose Diaz" />
 </div>
 ```
 
-Y en CSS agrega `img { width:100%; height:100%; object-fit:cover; }` dentro de `.hero-avatar`.
+And add CSS inside `.hero-avatar`:
 
----
----
-
-## Enviar formulario por correo (EmailJS)
-
-Si quieres que los mensajes enviados desde el formulario lleguen a tu correo personal sin montar un backend, puedes usar EmailJS (servicio que reenvía formularios desde el cliente).
-
-Pasos rápidos:
-
-1. Regístrate en https://www.emailjs.com/ y verifica tu email.
-2. Crea un Service (por ejemplo: gmail) y copia el Service ID.
-3. Crea una Template (ej. contact_form) y en la plantilla usa variables como `name`, `reply_to`, `message`.
-4. Copia tu User ID (aparece en el dashboard).
-5. En este repositorio:
-   - Abre `index.html` y asegúrate de que existe la línea que carga el SDK:
-     ```html
-     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-     ```
-   - Abre `src/js/forms.js` y reemplaza los placeholders:
-     - `YOUR_EMAILJS_USER_ID` → tu User ID
-     - `YOUR_SERVICE_ID` → Service ID
-     - `YOUR_TEMPLATE_ID` → Template ID
-
-Notas sobre la plantilla (Template):
-
-- Asegúrate que la plantilla de EmailJS contiene las variables que usa el script (`name`, `reply_to`, `message`) o ajusta `templateParams` en `src/js/forms.js`.
-- EmailJS tiene un plan gratuito con límites razonables para formularios personales.
-
-Si prefieres usar otro servicio (Formspree, Netlify Forms, un servidor propio o una función serverless), dímelo y adapto el código.
+```css
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
 
 ---
 
-## 👤 Autor
+## 📬 Send form by email (EmailJS)
+
+If you want contact form submissions to arrive by email without a backend, use EmailJS.
+
+Quick steps:
+
+1. Sign up at https://www.emailjs.com/ and verify your email.
+2. Create a service (for example: gmail) and copy the Service ID.
+3. Create a template (e.g. `contact_form`) and use variables like `name`, `reply_to`, `message`.
+4. Copy your User ID from the dashboard.
+5. In this repo:
+   - Confirm `index.html` loads the SDK script, if needed.
+   - Open `src/js/forms.js` and replace the placeholders with your EmailJS credentials.
+
+Template notes:
+
+- Make sure the EmailJS template contains the variables used by the script (`name`, `reply_to`, `message`) or adjust the template parameters accordingly.
+- EmailJS offers a free plan with reasonable limits for personal forms.
+
+If you prefer another service (Formspree, Netlify Forms, your own backend, or a serverless function), I can help adapt the code.
+
+---
+
+## 👤 Author
 
 **Jose Diaz**
 
 - 📧 josedelcarmen_diaz@outlook.com
 - 📍 Barranquilla, Colombia 🇨🇴
-- 💼 [LinkedIn](https://www.linkedin.com/in/jose-de-carmen-d-901b39a4?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+- 💼 [LinkedIn](https://www.linkedin.com/in/jose-de-carmen-d-901b39a4/)
 - 🐙 [GitHub](https://github.com/jose2520)
 
 ---
 
 <div align="center">
-  <sub>Hecho con ❤️ y mucho ☕ en Colombia · 2026</sub>
+  <sub>Made with ❤️ and lots of ☕ in Colombia · 2026</sub>
 </div>

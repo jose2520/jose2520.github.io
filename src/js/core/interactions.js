@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: interactions.js
-    Purpose: Validación de formularios, efectos de scroll, listeners de eventos y menú hamburguesa.
+    Purpose: Form validation, scroll effects, event listeners, and hamburger menu.
    ================================================================ */
 
 (function initInteractions() {
@@ -95,7 +95,7 @@
 
 
   /* ── CONTACT FORM HANDLING ────────────────────────────────────– */
-  // El envío real del formulario se maneja en src/js/forms.js mediante EmailJS.
+  // Actual form submission is handled in src/js/forms.js via EmailJS.
   // Este bloque se mantiene vacío para evitar manejadores duplicados.
 
   /* ── SMOOTH ACTIVE NAV ────────────────────────────────────────– */

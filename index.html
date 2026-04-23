@@ -1,4 +1,4 @@
-<!-- Archivo principal del portafolio web de Jose Diaz. Define la estructura HTML, carga módulos dinámicos y scripts organizados. -->
+<!-- Main portfolio HTML file. Defines the page structure, loads dynamic modules, and includes organized script and style order. -->
 <!doctype html>
 <html lang="es" data-theme="dark">
      <!-- ══════════════════════════════[ HEAD — Meta, Fuentes, Estilos]══════════════════════════════ -->
@@ -20,7 +20,7 @@
                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           />
 
-          <!-- [ Estilos modulares organizados - Orden de carga: Base → Themes → Components → Utilities → Animations ] -->
+          <!-- [ Modular styles organized - load order: Base → Themes → Components → Utilities → Animations ] -->
           <link rel="stylesheet" href="src/css/base/reset.css" />
           <link rel="stylesheet" href="src/css/themes/variables.css" />
           <link rel="stylesheet" href="src/css/base/base.css" />
@@ -40,51 +40,51 @@
 
      <!-- ══════════════════════════════[ BODY ]══════════════════════════════ -->
      <body>
-          <!-- Cursor personalizado -->
+          <!-- Custom cursor elements -->
           <div class="cursor" id="cursor"></div>
           <div class="cursor-ring" id="cursor-ring"></div>
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 0 · Capas de fondo globales                         │
+               │  MODULE 0 · Global background layers                        │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-background"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 1 · Navegación Principal                            │
+               │  MODULE 1 · Main navigation                                │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-nav"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 2 · Hero — Presentación                             │
+               │  MODULE 2 · Hero — Introduction                             │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-hero"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 3 · Sobre Mí — Detrás del Teclado                   │
+               │  MODULE 3 · About Me — Behind the keyboard                   │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-about"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 4 · Herramientas — Mi Caja de Juguetes              │
+               │  MODULE 4 · Tools — My toy box                               │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-tools"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 5 · Proyectos — Mis Aventuras                       │
+               │  MODULE 5 · Projects — My adventures                         │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-projects"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 6 · Contacto — ¿Hacemos algo épico juntos?          │
+               │  MODULE 6 · Contact — Shall we build something epic together?│
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-contact"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MÓDULO 7 · Footer                                          │
+               │  MODULE 7 · Footer                                         │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-footer"></div>
 
           <!-- Contenido cargado dinámicamente desde src/js/core/modules.js -->
-          <!-- Cada módulo HTML se inyecta en su contenedor correspondiente con fetch() -->
+          <!-- Each HTML module is injected into its container via fetch() -->
           <!-- ══════════════════════════════[ SCRIPTS ORGANIZADOS ]═════════════════════════════ -->
           <!-- Orden de carga: Core → Features → Modules → Utils -->
           <script src="src/js/core/core.js"></script>

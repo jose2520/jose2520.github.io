@@ -1,5 +1,5 @@
-// cursor.js - Cursor personalizado con punto y anillo que siguen el mouse.
-// Maneja animaciones y cambios de tamaño en hover sobre elementos interactivos.
+// cursor.js - Custom cursor with point and ring following the mouse.
+// Handles animations and size changes on hover for interactive elements.
 
 (function(){
     const cursor     = document.getElementById('cursor');

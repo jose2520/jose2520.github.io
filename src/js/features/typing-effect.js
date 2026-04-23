@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: typing-effect.js
-    Purpose: Animación de escritura para la etiqueta en la sección About.
+    Purpose: Typing animation for the label in the About section.
    ================================================================ */
 
 (function initTypingEffect() {

@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: canvas.js
-    Purpose: Fondo de canvas con nodos de código animados y partículas conectadas.
+    Purpose: Canvas background with animated code nodes and connected particles.
    ================================================================ */
 
 /* ── CANVAS NODES BACKGROUND ───────────────────────────────────– */

@@ -1,70 +1,70 @@
-// forms.js - Validación y envío de formulario de contacto usando EmailJS.
-// Implementa envío desde el cliente con validación y manejo de errores.
-// INSTRUCCIONES: Regístrate en https://www.emailjs.com/, crea un Service ID y un Template ID,
-// y copia tu User ID. Sustituye los placeholders en este archivo por esos valores.
+// forms.js - Contact form validation and submission using EmailJS.
+// Implements client-side submission with validation and error handling.
+// INSTRUCTIONS: Register at https://www.emailjs.com/, create a Service ID and a Template ID,
+// and copy your User ID. Replace placeholders in this file with those values.
 
-// Inicializar el formulario solo cuando el módulo HTML esté en el DOM.
+// Initialize the form only when the HTML module is in the DOM.
 // Modules are loaded asynchronously by modules.js which dispatches a `modulesLoaded` event.
-// We listen both for DOMContentLoaded and modulesLoaded and attempt init when the form exists.
+// We listen for both DOMContentLoaded and modulesLoaded and attempt init when the form exists.
 const EMAILJS_PUBLIC_KEY = 'AQxiDxsawGuKqcoEg';
 
 function tryInitForm() {
 	if (window.__contactFormInitDone) return;
 	const form = document.getElementById('contactForm');
-	if (!form) return; // aún no inyectado
+	if (!form) return; // not injected yet
 	window.__contactFormInitDone = true;
 
 	// EmailJS init / load logic
 	if (window.emailjs) {
-		// SDK presente pero puede que NO esté inicializado con la public key.
+		// SDK is present but may NOT be initialized with the public key.
 		try {
 			emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-			console.info('EmailJS SDK presente y inicializado con public key');
+			console.info('EmailJS SDK present and initialized with public key');
 		} catch (e) {
-			console.warn('EmailJS presente pero fallo init():', e);
+			console.warn('EmailJS present but init() failed:', e);
 		}
-	  } else {
-		// SDK no presente — intentamos cargarlo dinámicamente desde el CDN y luego inicializar
-		console.warn('EmailJS SDK no detectado — cargando dinámicamente desde CDN...');
+	} else {
+		// SDK not present — attempt dynamic CDN load then initialize
+		console.warn('EmailJS SDK not detected — loading dynamically from CDN...');
 		const s = document.createElement('script');
 		s.type = 'text/javascript';
-		// Cargar la versión v4 del SDK (cdn jsdelivr para @emailjs/browser)
+		// Load the v4 SDK (jsdelivr CDN for @emailjs/browser)
 		s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
 		s.onload = () => {
 			if (window.emailjs && typeof emailjs.init === 'function') {
 				try {
 					emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-					console.info('EmailJS inicializado dinámicamente');
+					console.info('EmailJS initialized dynamically');
 				} catch (e) {
-					console.warn('Error inicializando EmailJS tras carga dinámica:', e);
+					console.warn('Error initializing EmailJS after dynamic load:', e);
 				}
 			} else {
-				console.warn('El script de EmailJS cargó pero `window.emailjs` sigue sin estar definido.');
+				console.warn('EmailJS script loaded but `window.emailjs` is still undefined.');
 			}
 		};
 		s.onerror = (err) => {
-			console.warn('No se pudo cargar el SDK de EmailJS desde el CDN:', err);
+			console.warn('Could not load EmailJS SDK from CDN:', err);
 		};
 		document.head.appendChild(s);
-	  }
+	}
 
-	// A partir de aquí `form` existe — continuamos con la lógica del formulario
+	// From this point `form` exists — continue with form logic
 
 	const btnText = form.querySelector('.btn-text');
 	const btnLoading = form.querySelector('.btn-loading');
 	const successEl = document.getElementById('formSuccess');
-	const tiempoInput = form.elements['time'];
+	const timeInput = form.elements['time'];
 
-	// Autocompletar el tiempo cuando el formulario está listo
-	if (tiempoInput) {
+	// Auto-fill the time when the form is ready
+	if (timeInput) {
 		const now = new Date();
-		tiempoInput.value = now.toLocaleString('es-CO', {
+		timeInput.value = now.toLocaleString('es-CO', {
 			dateStyle: 'short',
 			timeStyle: 'short',
 		});
 	}
 
-	// Helpers para estado UI
+	// UI state helpers
 	function showLoading() {
 		if (btnText) btnText.style.display = 'none';
 		if (btnLoading) btnLoading.style.display = 'inline-block';
@@ -83,24 +83,24 @@ function tryInitForm() {
 			return;
 		}
 
-		const nombre = form.elements['name']?.value.trim() || '';
+		const nameValue = form.elements['name']?.value.trim() || '';
 		const email = form.elements['reply_to']?.value.trim() || '';
-		const mensaje = form.elements['message']?.value.trim() || '';
-		const tiempo = form.elements['time']?.value.trim() || '';
+		const messageValue = form.elements['message']?.value.trim() || '';
+		const timeValue = form.elements['time']?.value.trim() || '';
 
-		console.debug('Contact form values:', { nombre, email, mensaje, tiempo });
+		console.debug('Contact form values:', { nameValue, email, messageValue, timeValue });
 
-		// Mostrar loading
+		// Show loading
 		showLoading();
 
-		// Envío usando sendForm (envía todos los campos del formulario por su atributo name)
+		// Send using sendForm (submits all form fields by name attribute)
 		emailjs.sendForm('service_1325', 'template_1325', form)
 			.then(function () {
 				hideLoading();
 				form.reset();
 				if (successEl) {
 					successEl.style.display = 'block';
-					// Ocultar mensaje después de unos segundos
+					// Hide message after a few seconds
 					setTimeout(() => {
 						successEl.style.display = 'none';
 					}, 6000);
@@ -108,8 +108,8 @@ function tryInitForm() {
 			}, function (error) {
 				hideLoading();
 				console.error('EmailJS error:', error);
-				// Mensaje de fallback
-				alert('Ocurrió un error al enviar el mensaje. Por favor inténtalo de nuevo o escríbeme directamente a josedelcarmen_diaz@outlook.com');
+				// Fallback message
+				alert('An error occurred sending the message. Please try again or contact me directly at josedelcarmen_diaz@outlook.com');
 			});
 	});
 

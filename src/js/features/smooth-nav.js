@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: smooth-nav.js
-    Purpose: Navegación suave con tracking activo de secciones durante el scroll.
+    Purpose: Smooth navigation with active section tracking on scroll.
    ================================================================ */
 
 (function initSmoothNav() {

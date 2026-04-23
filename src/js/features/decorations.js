@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: decorations.js
-    Purpose: Decoraciones visuales y embellecimientos (duplicación de tira binaria, elementos decorativos).
+    Purpose: Visual decorations and embellishments (binary strip duplication, decorative elements).
    ================================================================ */
 
 (function initDecorations() {
