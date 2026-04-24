@@ -1,7 +1,7 @@
 /* ================================================================
     JOSE.DEV — JavaScript Modular Architecture
     File: core.js
-    Purpose: Inicialización core, scroll reveal con Intersection Observer y contadores animados.
+    Purpose: Core initialization, scroll reveal with Intersection Observer, and animated counters.
    ================================================================ */
 
 (function initCore() {

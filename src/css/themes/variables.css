@@ -38,10 +38,10 @@
 
 /* Light theme */
 [data-theme="light"] {
-  /* Backgrounds: blanco con ligeros matices lila */
-  --bg:         #ffffff;        /* fondo principal - blanco puro */
-  --bg2:        #fbf8ff;        /* fondo secundario - muy tenue lila */
-  --bg3:        #f3efff;        /* fondo terciario - ligero lila */
+  /* Backgrounds: white with a soft lilac tint */
+  --bg:         #ffffff;        /* main background - pure white */
+  --bg2:        #fbf8ff;        /* secondary background - very light lilac */
+  --bg3:        #f3efff;        /* tertiary background - light lilac */
 
   /* Surfaces */
   --card:       #ffffff;        /* tarjetas */
@@ -49,17 +49,17 @@
 
   /* Borders and text */
   --border:     rgba(124,92,255,0.08); /* borde sutil con tint lila */
-  --text:       #0f0f1a;        /* texto principal (oscuro sobre blanco) */
-  --text-muted: #6b658a;        /* texto secundario - tono lila grisáceo */
-  --text-faint: #bfb9d9;        /* texto tenue */
+  --text:       #0f0f1a;        /* main text (dark on white) */
+  --text-muted: #6b658a;        /* secondary text - muted lilac tone */
+  --text-faint: #bfb9d9;        /* faint text */
 
   /* Navbar / shadows */
   --nav-bg:     rgba(255,255,255,0.9);
   --shadow:     0 8px 40px rgba(16,12,40,0.06);
 
   /* Accent palette (replaces 'red' variables in light theme) */
-  --red:        #7c5cff;       /* color principal de acento: lila */
-  --red-dark:   #5a3dff;       /* acento oscuro */
+  --red:        #7c5cff;       /* primary accent color: lilac */
+  --red-dark:   #5a3dff;       /* dark accent */
   --red-rgb:    124, 92, 255;
   --red-glow:   rgba(124,92,255,0.35);
   --red-soft:   rgba(124,92,255,0.12);

@@ -102,7 +102,7 @@
 
   /* ── CONTACT FORM HANDLING ────────────────────────────────────– */
   // Actual form submission is handled in src/js/forms.js via EmailJS.
-  // Este bloque se mantiene vacío para evitar manejadores duplicados.
+  // This block remains empty to avoid duplicate event handlers.
 
   /* ── SMOOTH ACTIVE NAV ────────────────────────────────────────– */
   function initSmoothActiveNav() {

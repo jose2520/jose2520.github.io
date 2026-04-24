@@ -1,7 +1,7 @@
 /* ================================================================
   JOSE.DEV — CSS Modular Architecture
   File: animations.css
-  Purpose: Animaciones avanzadas — glitch, órbitas, shimmer, partículas y transiciones complejas.
+  Purpose: Advanced animations — glitch, orbits, shimmer, particles, and complex transitions.
    ================================================================ */
 
 /* ── GLITCH EFFECT ────────────────────────────────────────────── */
@@ -313,7 +313,7 @@
 }
 
 /* ── CURSOR GLOW EFFECT ────────────────────────────────────────– */
-/* Aplicado dinámicamente desde JavaScript */
+/* Applied dynamically from JavaScript */
 @keyframes cursorGlowPulse {
   0%,
   100% {
