@@ -18,6 +18,13 @@
     H,
     nodes = [],
     frame = 0;
+  let currentRedRgb = getComputedStyle(document.documentElement).getPropertyValue('--red-rgb').trim();
+
+  // Observer to update colors when theme changes
+  const themeObserver = new MutationObserver(() => {
+    currentRedRgb = getComputedStyle(document.documentElement).getPropertyValue('--red-rgb').trim();
+  });
+  themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
   const SYMBOLS = [
     "<",
@@ -87,7 +94,7 @@
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = `rgba(230,57,70,${(1 - dist / 130) * 0.12})`;
+          ctx.strokeStyle = `rgba(${currentRedRgb},${(1 - dist / 130) * 0.12})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -100,7 +107,7 @@
       const a = n.alpha + Math.sin(n.pulse) * 0.05;
 
       ctx.font = `${n.size * 6}px 'Fira Code', monospace`;
-      ctx.fillStyle = `rgba(230,57,70,${a})`;
+      ctx.fillStyle = `rgba(${currentRedRgb},${a})`;
       ctx.fillText(n.sym, n.x, n.y);
 
       // Update position
