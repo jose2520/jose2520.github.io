@@ -79,7 +79,7 @@
 .name-underline {
   display: block;
   height: 4px;
-  background: linear-gradient(90deg, var(--red), #ff6b7a, var(--red));
+  background: linear-gradient(90deg, var(--red) 0%, transparent 50%, var(--red) 100%);
   background-size: 200% 100%;
   border-radius: 2px;
   animation: gradientMove 3s linear infinite;
