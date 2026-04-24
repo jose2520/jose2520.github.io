@@ -46,11 +46,17 @@
   tryInitHamburgerMenu();
 
   /* ── NAVBAR SCROLL EFFECT ──────────────────────────────────────– */
-  const navbar = document.getElementById("navbar");
+  function initNavbarScrollEffect() {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return;
 
-  window.addEventListener("scroll", () => {
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
-  });
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  }
+
+  document.addEventListener("modulesLoaded", initNavbarScrollEffect);
+  initNavbarScrollEffect();
 
   /* ── GLITCH ON HOVER ───────────────────────────────────────────– */
   const glitchEl = document.querySelector(".glitch");
@@ -99,26 +105,30 @@
   // Este bloque se mantiene vacío para evitar manejadores duplicados.
 
   /* ── SMOOTH ACTIVE NAV ────────────────────────────────────────– */
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
+  function initSmoothActiveNav() {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
 
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navLinks.forEach((link) => {
-            link.classList.toggle(
-              "active",
-              link.getAttribute("href") === `#${entry.target.id}`,
-            );
-          });
-        }
-      });
-    },
-    { threshold: 0.4 },
-  );
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navLinks.forEach((link) => {
+              link.classList.toggle(
+                "active",
+                link.getAttribute("href") === `#${entry.target.id}`,
+              );
+            });
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
 
-  sections.forEach((s) => sectionObserver.observe(s));
+    sections.forEach((s) => sectionObserver.observe(s));
+  }
+
+  document.addEventListener("modulesLoaded", initSmoothActiveNav);
 
   /* ── TYPING EFFECT (About Section) ────────────────────────────– */
   (function initTyping() {
