@@ -3,12 +3,15 @@
 // INSTRUCTIONS: Register at https://www.emailjs.com/, create a Service ID and a Template ID,
 // and copy your User ID. Replace placeholders in this file with those values.
 
+// Service and Template IDs (REPLACE WITH YOUR REAL ONES)
+const EMAILJS_SERVICE_ID = 'service_1325'; // Replace with your EmailJS Service ID
+const EMAILJS_TEMPLATE_ID = 'template_1325'; // Replace with your EmailJS Template ID
+const EMAILJS_PUBLIC_KEY = 'AQxiDxsawGuKqcoEg'; // Replace with your EmailJS Public Key
+
 // Initialize the form only when the HTML module is in the DOM.
 // Modules are loaded asynchronously by modules.js which dispatches a `modulesLoaded` event.
 // We listen for both DOMContentLoaded and modulesLoaded and attempt init when the form exists.
-const EMAILJS_PUBLIC_KEY = 'AQxiDxsawGuKqcoEg';
-
-function tryInitForm() {
+async function tryInitForm() {
 	if (window.__contactFormInitDone) return;
 	const form = document.getElementById('contactForm');
 	if (!form) return; // not injected yet
@@ -74,7 +77,7 @@ function tryInitForm() {
 		if (btnText) btnText.style.display = 'inline-block';
 	}
 
-	form.addEventListener('submit', function (e) {
+	form.addEventListener('submit', async function (e) {
 		e.preventDefault();
 
 		// HTML5 validation
@@ -93,24 +96,24 @@ function tryInitForm() {
 		// Show loading
 		showLoading();
 
-		// Send using sendForm (submits all form fields by name attribute)
-		emailjs.sendForm('service_1325', 'template_1325', form)
-			.then(function () {
-				hideLoading();
-				form.reset();
-				if (successEl) {
-					successEl.style.display = 'block';
-					// Hide message after a few seconds
-					setTimeout(() => {
-						successEl.style.display = 'none';
-					}, 6000);
-				}
-			}, function (error) {
-				hideLoading();
-				console.error('EmailJS error:', error);
-				// Fallback message
-				alert('An error occurred sending the message. Please try again or contact me directly at josedelcarmen_diaz@outlook.com');
-			});
+		try {
+			// Send using sendForm (submits all form fields by name attribute)
+			await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+			hideLoading();
+			form.reset();
+			if (successEl) {
+				successEl.style.display = 'block';
+				// Hide message after a few seconds
+				setTimeout(() => {
+					successEl.style.display = 'none';
+				}, 6000);
+			}
+		} catch (error) {
+			hideLoading();
+			console.error('EmailJS error:', error);
+			// Fallback message
+			alert('An error occurred sending the message. Please try again or contact me directly at josedelcarmen_diaz@outlook.com');
+		}
 	});
 
 }

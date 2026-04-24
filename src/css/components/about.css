@@ -205,7 +205,8 @@
   font-size: 0.72rem;
   color: var(--text-faint);
   letter-spacing: 2px;
-  animation: scrollText 20s linear infinite;
+  animation: scrollText 30s linear infinite;
+  padding-right: 2rem;
 }
 
 @keyframes scrollText {
