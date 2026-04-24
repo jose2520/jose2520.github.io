@@ -247,6 +247,33 @@
   padding: 0.5rem 0;
 }
 
+.mobile-menu a.btn-cv {
+  background: var(--red);
+  color: #fff;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  box-shadow: 0 0 0 0 var(--red-glow);
+  transition:
+    background 0.25s,
+    transform 0.2s,
+    box-shadow 0.25s,
+    color 0.25s;
+  margin-top: 0.75rem;
+}
+
+.mobile-menu a.btn-cv:hover {
+  background: var(--red-dark);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px var(--red-glow);
+}
+
 .mobile-menu a:hover {
   color: var(--red);
 }
