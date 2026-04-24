@@ -1,20 +1,50 @@
 <!-- Main portfolio HTML file. Defines the page structure, loads dynamic modules, and includes organized script and style order. -->
 <!doctype html>
 <html lang="es" data-theme="dark">
-     <!-- ══════════════════════════════[ HEAD — Meta, Fuentes, Estilos]══════════════════════════════ -->
+     <!-- ══════════════════════════════[ HEAD — Meta, Fonts, Styles]══════════════════════════════ -->
      <head>
           <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta name="description" content="Jose Diaz — Junior Developer & Imagineer. Portfolio personal."/>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="Jose Diaz — Junior Developer & Imagineer. Portfolio personal con proyectos, habilidades y experiencia en desarrollo web." />
+          <meta name="keywords" content="desarrollador junior, imagineer, portfolio, web development, frontend, backend, JavaScript, HTML, CSS" />
           <meta name="author" content="Jose Diaz" />
+          <meta name="sitedomain" content="https://jose2520.github.io" />
+          <meta name="organization" content="Jose Diaz" />
+          <meta name="designer" content="Jose Diaz" />
+          <meta name="copyright" content="© 2026 Jose Diaz. Todos los derechos reservados" />
+          <meta name="robots" content="index,follow" />
+          <meta name="googlebot" content="index,follow" />
+          <meta http-equiv="Content-Language" content="es" />
+          <link rel="canonical" href="https://jose2520.github.io/" />
+
+          <!-- Open Graph -->
+          <meta property="og:site_name" content="Jose Diaz" />
+          <meta property="og:url" content="https://jose2520.github.io" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Jose Diaz | Junior Developer & Imagineer" />
+          <meta property="og:description" content="Portfolio personal de Jose Diaz con proyectos, habilidades y experiencia en desarrollo web." />
+          <meta property="og:locale" content="es_ES" />
+          <meta property="og:image" content="https://jose2520.github.io/public/img/profile/profile.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="1200" />
+
+          <!-- Twitter Card -->
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Jose Diaz | Junior Developer & Imagineer" />
+          <meta name="twitter:description" content="Portfolio personal de Jose Diaz con proyectos, habilidades y experiencia en desarrollo web." />
+          <meta name="twitter:image" content="https://jose2520.github.io/public/img/profile/profile.jpg" />
+          <meta name="twitter:creator" content="@jose2520" />
+          <meta name="twitter:site" content="@jose2520" />
+          <meta name="twitter:url" content="https://jose2520.github.io" />
+
           <title>Jose.dev — Developer &amp; Imagineer</title>
-          <!-- [ Fuentes ] -->
+          <!-- [ Fonts ] -->
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
                href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap"
                rel="stylesheet"
           />
-          <!-- [ Iconos ] -->
+          <!-- [ Icons ] -->
           <link
                rel="stylesheet"
                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -83,10 +113,10 @@
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-footer"></div>
 
-          <!-- Contenido cargado dinámicamente desde src/js/core/modules.js -->
+          <!-- Content loaded dynamically from src/js/core/modules.js -->
           <!-- Each HTML module is injected into its container via fetch() -->
-          <!-- ══════════════════════════════[ SCRIPTS ORGANIZADOS ]═════════════════════════════ -->
-          <!-- Orden de carga: Core → Features → Modules → Utils -->
+          <!-- ══════════════════════════════[ ORGANIZED SCRIPTS ]═════════════════════════════ -->
+          <!-- Load order: Core → Features → Modules → Utils -->
           <script src="src/js/core/core.js"></script>
           <script src="src/js/core/interactions.js"></script>
           <script src="src/js/core/modules.js"></script>
@@ -95,7 +125,7 @@
           <script src="src/js/features/typing-effect.js"></script>
           <script src="src/js/features/decorations.js"></script>
           <script src="src/js/features/canvas.js"></script>
-          <!-- EmailJS SDK (necesario para envío de emails desde el cliente) -->
+          <!-- EmailJS SDK (required for sending emails from the client) -->
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
           <script src="src/js/utils/forms.js"></script>
           <script src="src/js/utils/cursor.js"></script>
