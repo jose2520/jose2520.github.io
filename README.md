@@ -7,10 +7,12 @@ Built 100% with **HTML · pure CSS · vanilla JavaScript** — no frameworks, no
 
 **Organized modular architecture** with clear separation between styles, logic, and content for maximum maintainability and scalability.
 
+
 ---
 
 ## 📋 Table of contents
 
+- [Live Demo](#-live-demo)
 - [Preview](#-preview)
 - [Technologies](#-technologies)
 - [Project structure](#-project-structure)
@@ -22,6 +24,11 @@ Built 100% with **HTML · pure CSS · vanilla JavaScript** — no frameworks, no
 - [Customization](#-customization)
 - [Author](#-author)
 
+---
+
+## 🌐 Live Demo
+
+[View Live Site](https://jose2520.github.io/)
 ---
 
 ## 🖼 Preview
