@@ -236,6 +236,21 @@
   color: #00758f;
 }
 
+.tailwind-icon {
+  background: rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+}
+
+.express-icon {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.axios-icon {
+  background: rgba(90, 41, 228, 0.15);
+  color: #5a29e4;
+}
+
 .ts-logo {
   font-family: var(--font-code);
   font-size: 0.85rem;
