@@ -246,6 +246,11 @@
   color: #ffffff;
 }
 
+[data-theme="light"] .express-icon {
+  background: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
 .axios-icon {
   background: rgba(90, 41, 228, 0.15);
   color: #5a29e4;
