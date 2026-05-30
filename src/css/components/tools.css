@@ -142,6 +142,12 @@
   transform: rotate(10deg) scale(1.15);
 }
 
+.tool-img-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 /* Tool Icon Colors */
 .js-icon {
   background: rgba(247, 223, 30, 0.15);
@@ -186,6 +192,10 @@
 .laravel-icon {
   background: rgba(255, 45, 32, 0.15);
   color: #ff2d20;
+}
+.nativephp-icon {
+  background: rgba(119, 123, 179, 0.15);
+  color: #777bb3;
 }
 .bootstrap-icon {
   background: rgba(124, 58, 237, 0.15);
