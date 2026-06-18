@@ -1,0 +1,310 @@
+/* ================================================================
+  JOSE.DEV — CSS Modular Architecture
+  File: maintenance-modal.css
+  Purpose: Maintenance modal overlay with canvas, animations, and
+           dismissable notification.
+   ================================================================ */
+
+/* ── OVERLAY ──────────────────────────────────────────────────── */
+#maintenance-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(11, 11, 15, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: overlayIn 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+#maintenance-overlay.dismissed {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes overlayIn {
+  to { opacity: 1; }
+}
+
+/* ── MODAL CARD ───────────────────────────────────────────────── */
+#maintenance-modal {
+  position: relative;
+  width: 500px;
+  max-width: 92vw;
+  background: var(--card);
+  border: 1.5px solid var(--red);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 0 60px var(--red-glow), 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: scale(0.92) translateY(20px);
+  animation: modalIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s forwards;
+}
+
+@keyframes modalIn {
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ── MINI CANVAS ──────────────────────────────────────────────── */
+#maintenance-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 0;
+}
+
+/* ── MODAL CONTENT (above canvas) ─────────────────────────────── */
+.maintenance-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── ICON ─────────────────────────────────────────────────────── */
+.maintenance-icon {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 1.5rem;
+  background: var(--red-soft);
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--red);
+  animation: mIconPulse 2.5s ease-in-out infinite;
+  position: relative;
+}
+
+.maintenance-icon i {
+  animation: mIconSpin 8s linear infinite;
+}
+
+@keyframes mIconPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--red-glow);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px var(--red-glow);
+    transform: scale(1.06);
+  }
+}
+
+@keyframes mIconSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ── GLITCH TITLE ─────────────────────────────────────────────── */
+.maintenance-title {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-sans);
+  position: relative;
+  display: inline-block;
+}
+
+.maintenance-title::before,
+.maintenance-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.maintenance-title::before {
+  color: var(--red);
+  animation: mGlitch1 3s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  transform: translate(-2px, -2px);
+  opacity: 0;
+}
+
+.maintenance-title::after {
+  color: #00f0ff;
+  animation: mGlitch2 3s infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(2px, 2px);
+  opacity: 0;
+}
+
+@keyframes mGlitch1 {
+  0%, 85%, 100% { opacity: 0; transform: translate(-2px, -2px); }
+  86%, 88% { opacity: 0.6; transform: translate(-4px, -4px); }
+  87%, 89% { opacity: 0; transform: translate(0, 0); }
+}
+
+@keyframes mGlitch2 {
+  0%, 85%, 100% { opacity: 0; transform: translate(2px, 2px); }
+  86%, 88% { opacity: 0.5; transform: translate(4px, 4px); }
+  87%, 89% { opacity: 0; transform: translate(0, 0); }
+}
+
+/* ── SUBTITLE ─────────────────────────────────────────────────── */
+.maintenance-sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 1rem 0 1.8rem;
+  line-height: 1.7;
+}
+
+.maintenance-sub strong {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* ── LOADING BAR ──────────────────────────────────────────────── */
+.maintenance-bar-wrap {
+  width: 220px;
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 2px;
+  margin: 0 auto 1.8rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.maintenance-bar-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  border-radius: 2px;
+  width: 40%;
+  animation: barSweep 2s ease-in-out infinite;
+}
+
+@keyframes barSweep {
+  0% { left: -40%; }
+  100% { left: 100%; }
+}
+
+/* ── BUTTON ENTER ─────────────────────────────────────────────── */
+.maintenance-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.maintenance-btn:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--red-glow);
+}
+
+.maintenance-btn i {
+  font-size: 0.85rem;
+  transition: transform 0.3s;
+}
+
+.maintenance-btn:hover i {
+  transform: translateX(3px);
+}
+
+/* ── FOOTER ───────────────────────────────────────────────────── */
+.maintenance-footer {
+  margin-top: 1.8rem;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  font-family: var(--font-code);
+  letter-spacing: 0.5px;
+}
+
+.maintenance-footer .m-dot {
+  color: var(--red);
+}
+
+/* ── CLOSE BUTTON ─────────────────────────────────────────────── */
+.maintenance-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 2;
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.25s, background 0.25s, transform 0.3s;
+  line-height: 1;
+}
+
+.maintenance-close:hover {
+  color: var(--red);
+  background: var(--red-soft);
+  transform: rotate(90deg);
+}
+
+/* ── FLOATING PARTICLES INSIDE MODAL ──────────────────────────── */
+.m-particle {
+  position: absolute;
+  font-family: var(--font-code);
+  font-size: 0.55rem;
+  color: var(--red);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  animation: mParticleFloat var(--dur, 10s) linear var(--delay, 0s) infinite;
+  user-select: none;
+}
+
+@keyframes mParticleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) rotate(var(--rot, 0deg));
+  }
+  10% {
+    opacity: 0.3;
+  }
+  85% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20%) rotate(calc(var(--rot, 0deg) + 15deg));
+  }
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  #maintenance-modal {
+    padding: 2rem 1.5rem;
+  }
+
+  .maintenance-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 1.5rem;
+  }
+}

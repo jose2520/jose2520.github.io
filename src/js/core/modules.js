@@ -9,7 +9,10 @@
 
   // Module configuration with optimized load order
   const modules = [
-    // Background first (page background)
+    // Maintenance modal first (appears before all content)
+    { id: "mod-maintenance", file: "src/view/mod-maintenance.html", priority: 0 },
+
+    // Background second (page background layers)
     { id: "mod-background", file: "src/view/mod-background.html", priority: 1 },
 
     // Navigation next (necessary for site structure)

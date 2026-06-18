@@ -70,6 +70,7 @@
           <link rel="stylesheet" href="src/css/components/projects.css" />
           <link rel="stylesheet" href="src/css/components/contact.css" />
           <link rel="stylesheet" href="src/css/components/footer.css" />
+          <link rel="stylesheet" href="src/css/components/maintenance-modal.css" />
           <link rel="stylesheet" href="src/css/animations/animations.css" />
           <link rel="stylesheet" href="src/css/animations/cursor.css" />
           <link rel="stylesheet" href="src/css/animations/responsive.css" />
@@ -80,43 +81,49 @@
           <!-- Custom cursor elements -->
           <div class="cursor" id="cursor"></div>
           <div class="cursor-ring" id="cursor-ring"></div>
+
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 0 · Global background layers                        │
+               │  MODULE 0 · Maintenance modal notification                  │
+               └─────────────────────────────────────────────────────────────┘ -->
+          <div id="mod-maintenance"></div>
+
+          <!-- ┌─────────────────────────────────────────────────────────────┐
+               │  MODULE 1 · Global background layers                        │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-background"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 1 · Main navigation                                 │
+               │  MODULE 2 · Main navigation                                 │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-nav"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 2 · Hero — Introduction                             │
+               │  MODULE 3 · Hero — Introduction                             │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-hero"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 3 · About Me — Behind the keyboard                  │
+               │  MODULE 4 · About Me — Behind the keyboard                  │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-about"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 4 · Tools — My toy box                              │
+               │  MODULE 5 · Tools — My toy box                              │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-tools"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 5 · Projects — My adventures                        │
+               │  MODULE 6 · Projects — My adventures                        │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-projects"></div>
 
           <!-- ┌──────────────────────────────────────────────────────────────┐
-               │  MODULE 6 · Contact — Shall we build something epic together?│
+               │  MODULE 7 · Contact — Shall we build something epic together?│
                └──────────────────────────────────────────────────────────────┘ -->
           <div id="mod-contact"></div>
 
           <!-- ┌─────────────────────────────────────────────────────────────┐
-               │  MODULE 7 · Footer                                          │
+               │  MODULE 8 · Footer                                          │
                └─────────────────────────────────────────────────────────────┘ -->
           <div id="mod-footer"></div>
 
@@ -136,5 +143,6 @@
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
           <script src="src/js/utils/forms.js"></script>
           <script src="src/js/utils/cursor.js"></script>
+          <script src="src/js/features/maintenance.js"></script>
      </body>
 </html>
