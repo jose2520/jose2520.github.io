@@ -25,6 +25,11 @@
     }
     const ctx = canvas.getContext("2d");
     let W, H, nodes = [];
+    let currentRedRgb = getComputedStyle(document.documentElement).getPropertyValue('--red-rgb').trim();
+    const themeObserver = new MutationObserver(() => {
+      currentRedRgb = getComputedStyle(document.documentElement).getPropertyValue('--red-rgb').trim();
+    });
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     const SYMBOLS = ["<", ">", "/", "{", "}", ";", "=", "0", "1", "#", "=>", "()"];
 
     function resize() {
@@ -64,7 +69,7 @@
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(230, 57, 70, ${(1 - dist / 70) * 0.2})`;
+            ctx.strokeStyle = `rgba(${currentRedRgb},${(1 - dist / 70) * 0.2})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -73,7 +78,7 @@
 
       nodes.forEach((n) => {
         ctx.font = `${n.size * 6}px "Fira Code", monospace`;
-        ctx.fillStyle = `rgba(230, 57, 70, ${n.alpha})`;
+        ctx.fillStyle = `rgba(${currentRedRgb},${n.alpha})`;
         ctx.fillText(n.sym, n.x, n.y);
         n.x += n.vx;
         n.y += n.vy;
