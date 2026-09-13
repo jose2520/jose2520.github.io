@@ -18,7 +18,7 @@
     function updateImages(theme) {
       const profileImg = document.querySelector('.hero-photo-frame img');
       if (profileImg) {
-        profileImg.src = theme === "dark" ? "public/img/profile/dark.webp" : "public/img/profile/while.webp";
+        profileImg.src = theme === "dark" ? "public/img/profile/darkk.png" : "public/img/profile/whilee.png";
       }
     }
 

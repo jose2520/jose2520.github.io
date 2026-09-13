@@ -12,14 +12,14 @@
     <!-- ── Sub-module 6.1: Contact information ── -->
     <div class="contact-left reveal">
       <div class="hero-tag">
-        <i class="fas fa-envelope" aria-hidden="true"></i> Contacto
+        <i class="fas fa-envelope" aria-hidden="true"></i> <span data-i18n="contact.tag">Contacto</span>
       </div>
 
       <h2 class="contact-heading">
-        ¿Hacemos algo<br /><strong data-text="ÉPICO">Épico</strong> juntos?
+        <span data-i18n="contact.title1">¿Hacemos algo</span><br /><strong data-text="ÉPICO" data-i18n="contact.title2">Épico</strong><span data-i18n="contact.title3"> juntos?</span>
       </h2>
 
-      <p class="contact-sub">
+      <p class="contact-sub" data-i18n="contact.sub">
         Mi buzón siempre está abierto para nuevas aventuras, preguntas sobre
         código o simplemente para decir hola.
       </p>
@@ -42,8 +42,8 @@
             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
           </div>
           <div class="ci-text">
-            <span class="ci-label">Ubicación</span>
-            <span class="ci-value">Barranquilla, Colombia 🇨🇴</span>
+            <span class="ci-label" data-i18n="contact.locTitle">Ubicación</span>
+            <span class="ci-value" data-i18n="contact.locValue">Barranquilla, Colombia 🇨🇴</span>
           </div>
         </a>
 
@@ -79,7 +79,7 @@
         <div class="form-group">
           <input type="text" id="fname" name="name" placeholder=" " autocomplete="off" required />
           <label for="fname">
-            <i class="fas fa-user" aria-hidden="true"></i> Tu Nombre
+            <i class="fas fa-user" aria-hidden="true"></i> <span data-i18n="contact.fname">Tu Nombre</span>
           </label>
         </div>
 
@@ -87,7 +87,7 @@
         <div class="form-group">
           <input type="email" id="femail" name="reply_to" placeholder=" " autocomplete="off" required />
           <label for="femail">
-            <i class="fas fa-at" aria-hidden="true"></i> Tu Email
+            <i class="fas fa-at" aria-hidden="true"></i> <span data-i18n="contact.femail">Tu Email</span>
           </label>
         </div>
 
@@ -95,7 +95,7 @@
         <div class="form-group">
           <textarea id="fmsg" name="message" rows="4" placeholder=" " required></textarea>
           <label for="fmsg">
-            <i class="fas fa-comment-dots" aria-hidden="true"></i> ¿Qué tienes en mente?
+            <i class="fas fa-comment-dots" aria-hidden="true"></i> <span data-i18n="contact.fmsg">¿Qué tienes en mente?</span>
           </label>
         </div>
 
@@ -105,22 +105,21 @@
         <!-- Submit button -->
         <button type="submit" class="btn-send" aria-label="Enviar mensaje">
           <span class="btn-text">
-            <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar
-            Mensaje
+            <i class="fas fa-paper-plane" aria-hidden="true"></i> <span data-i18n="contact.btn">Enviar Mensaje</span>
           </span>
           <span class="btn-loading" style="display: none" aria-live="polite">
             <svg class="custom-loader" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <circle class="loader-path" cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3"
                 stroke-linecap="round"></circle>
             </svg>
-            <span class="loading-text">Enviando<span class="loading-dots"></span></span>
+            <span class="loading-text"><span data-i18n="contact.sending">Enviando</span><span class="loading-dots"></span></span>
           </span>
         </button>
 
         <!-- Success message -->
         <div class="form-success" id="formSuccess" role="alert" aria-live="assertive">
           <i class="fas fa-check-circle" aria-hidden="true"></i>
-          ¡Mensaje enviado! Te responderé pronto
+          <span data-i18n="contact.success">¡Mensaje enviado! Te responderé pronto</span>
         </div>
       </form>
       <!-- /contact-form -->
